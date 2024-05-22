@@ -8,57 +8,58 @@ html_start = """<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CTF Arsenal</title>
-  <link rel="stylesheet" href="css/prism.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTF Arsenal</title>
+<link rel="stylesheet" href="css/prism.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-dark text-light">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body">
-      <div class="container-fluid">
-        <span class="navbar-brand">
-          <div class="vr">&nbsp;</div>
-          CTF Arsenal
-          <div class="vr">&nbsp;</div>
-        </span>
-      </div>
-    </nav>
-  </div>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 left-side border">
-        <div class="container p-4">
-          <div class="accordion accordion-flush" id="accordionFlush">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body">
+<div class="container-fluid">
+<span class="navbar-brand">
+<div class="vr">&nbsp;</div>
+CTF Arsenal
+<div class="vr">&nbsp;</div>
+</span>
+</div>
+</nav>
+</div>
+<div class="container mt-5">
+<div class="row">
+<div class="col-md-6 left-side border">
+<div class="container p-4">
+<div class="accordion accordion-flush" id="accordionFlush">
 """
 
-html_end = """          </div>
-        </div>
-      </div>
-      <div class="col-md-6 right-side border">
-        <div class="container p-4">
-          <h4>Installation directory</h4>
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">$TOOLS = $HOME/</span>
-            <input id="tools-path" type="text" class="form-control" placeholder="Username" aria-label="Username"
-              aria-describedby="basic-addon1" value="Tools">
-            <button class="btn btn-dark border-white" type="button" onclick="downloadScript()">Generate script</button>
-          </div>
-          <hr>
-          <code id="script-output" style="color:white">
-          </code>
-        </div>
-      </div>
-    </div>
+html_end = """</div>
+</div>
+</div>
+<div class="col-md-6 right-side border">
+<div class="container p-4">
+  <h4>Installation directory</h4>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">$TOOLS = $HOME/</span>
+    <input id="tools-path" type="text" class="form-control" placeholder="Username" aria-label="Username"
+      aria-describedby="basic-addon1" value="Tools">
+    <button class="btn btn-dark border-white" type="button" onclick="downloadScript()">Generate script</button>
   </div>
-  <script src="js/jquery.js"></script>
-  <script src="js/prism.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/buttonPress.js"></script>
+  <hr>
+  <code id="script-output" style="color:white">
+  </code>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/prism.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/buttonPress.js"></script>
+<script src="js/popovers.js"></script>
 </body>
 
 </html>
@@ -99,34 +100,35 @@ def read_json_file(filepath):
 
 accordion_start = """
 <div class="accordion-item bg-dark text-white">
-    <h2 class="accordion-header bg-dark text-white" id="flush-heading{ACCORDION_NAME}">
-    <button class="accordion-button collapsed bg-dark text-white border" type="button"
-        data-bs-toggle="collapse" data-bs-target="#flush-collapse{ACCORDION_NAME}" aria-expanded="false"
-        aria-controls="flush-collapse{ACCORDION_NAME}">
-        {ACCORDION_NAME}&nbsp;<span class="badge badge-light bg-light text-dark"><span id="{ACCORDION_CATEGORY}-counter">0</span>/{NUMBER_OF_TOOLS}</span>
-    </button>
-    </h2>
-    <div id="flush-collapse{ACCORDION_NAME}" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-heading{ACCORDION_NAME}">
-    <div class="accordion-body">
-        <button class="btn btn-success border-white m-1" type="button" onclick="allTools('{ACCORDION_CATEGORY}')">ALL</button>
-        <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('{ACCORDION_CATEGORY}')">None</button>
+<h2 class="accordion-header bg-dark text-white" id="flush-heading{ACCORDION_NAME}">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapse{ACCORDION_NAME}" aria-expanded="false"
+aria-controls="flush-collapse{ACCORDION_NAME}">
+{ACCORDION_NAME}&nbsp;<span class="badge badge-light bg-light text-dark"><span id="{ACCORDION_CATEGORY}-counter">0</span>/{NUMBER_OF_TOOLS}</span>
+</button>
+</h2>
+<div id="flush-collapse{ACCORDION_NAME}" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-heading{ACCORDION_NAME}">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('{ACCORDION_CATEGORY}')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('{ACCORDION_CATEGORY}')">None</button>
 """
 
 accordion_end = """</div>
-    </div>
+</div>
 </div>
 """
 
 accordion_data = ""
 
-accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}">{TOOL_NAME}</button>"""
+accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
 
 new_html = ""
 
 if __name__ == "__main__":
-    with open("index.html", "w") as f:
+    descriptions = read_json_file("descriptions.json")
+    with open("../index.html", "w") as f:
         f.write(html_start)
-        root_directory = "tools"
+        root_directory = "../tools"
         structure = traverse_directory(root_directory)
         for dirpath, files in structure.items():
             for file in files:
@@ -146,12 +148,13 @@ if __name__ == "__main__":
                 )
 
                 for TOOL_NAME in data.keys():
-                    if re.search(r'\b{}\b'.format(re.escape(TOOL_NAME)), new_html):
+                    if re.search(r"\b{}\b".format(re.escape(TOOL_NAME)), new_html):
                         print(f"{TOOL_NAME} already in document {file}")
-                        exit(1)
+                        input()
+                    TOOL_DESCRIPTION = descriptions[TOOL_NAME]
                     output += (
                         accordion_button.format(
-                            TOOL_NAME=TOOL_NAME, ACCORDION_CATEGORY=ACCORDION_CATEGORY
+                            TOOL_NAME=TOOL_NAME, ACCORDION_CATEGORY=ACCORDION_CATEGORY, TOOL_DESCRIPTION=TOOL_DESCRIPTION
                         )
                         + "\n"
                     )
