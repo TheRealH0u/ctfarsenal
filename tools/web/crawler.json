@@ -1,0 +1,4 @@
+{
+"webgrep":"git -C $TPATH clone https://github.com/dhondta/webgrep.git",
+"katana": "git -C $TPATH clone https://github.com/projectdiscovery/katana.git"
+}

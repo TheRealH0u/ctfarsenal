@@ -1,0 +1,3 @@
+{
+    "stegsolver":"wget http://www.caesum.com/handbook/Stegsolve.jar -O $TPATH/stegsolve.jar"
+}

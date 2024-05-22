@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Arsenal</title>
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body">
+            <div class="container-fluid">
+                <span class="navbar-brand">
+                    <div class="vr">&nbsp;</div>
+                    CTF Arsenal
+                    <div class="vr">&nbsp;</div>
+                </span>
+            </div>
+        </nav>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 left-side border">
+                <div class="container p-4">
+                    <div class="accordion accordion-flush" id="accordionFlush">
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingAndroid">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseAndroid"
+                                    aria-expanded="false" aria-controls="flush-collapseAndroid">
+                                    Android&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="android-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseAndroid" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingAndroid">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('android')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('android')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="genymotion"
+                                        data-category="android">genymotion</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="slicer"
+                                        data-category="android">slicer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingApt">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseApt" aria-expanded="false"
+                                    aria-controls="flush-collapseApt">
+                                    Apt&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="apt-counter">0</span>/30</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseApt" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingApt">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('apt')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('apt')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="git" data-category="apt">git</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="python3-scrapy"
+                                        data-category="apt">python3-scrapy</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="python3-pwntools"
+                                        data-category="apt">python3-pwntools</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="pff-tools"
+                                        data-category="apt">pff-tools</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="docker"
+                                        data-category="apt">docker</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="docker-compose"
+                                        data-category="apt">docker-compose</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gpp" data-category="apt">gpp</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gcc" data-category="apt">gcc</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gdb" data-category="apt">gdb</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ltrace"
+                                        data-category="apt">ltrace</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="strace"
+                                        data-category="apt">strace</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="foremost"
+                                        data-category="apt">foremost</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="steghide"
+                                        data-category="apt">steghide</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="exiftool"
+                                        data-category="apt">exiftool</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sshuttle"
+                                        data-category="apt">sshuttle</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gimp" data-category="apt">gimp</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="inkscape"
+                                        data-category="apt">inkscape</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="flameshot"
+                                        data-category="apt">flameshot</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="remmina"
+                                        data-category="apt">remmina</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ranger"
+                                        data-category="apt">ranger</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="htop" data-category="apt">htop</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="redshift"
+                                        data-category="apt">redshift</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="pdfcrack"
+                                        data-category="apt">pdfcrack</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="fcrackzip"
+                                        data-category="apt">fcrackzip</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="libwine"
+                                        data-category="apt">libwine</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="pdf-parser"
+                                        data-category="apt">pdf-parser</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="lynx" data-category="apt">lynx</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="golang-go"
+                                        data-category="apt">golang-go</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="albert"
+                                        data-category="apt">albert</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="seclists"
+                                        data-category="apt">seclists</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingCrypto">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseCrypto"
+                                    aria-expanded="false" aria-controls="flush-collapseCrypto">
+                                    Crypto&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="crypto-counter">0</span>/15</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseCrypto" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingCrypto">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('crypto')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('crypto')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="rsactftool"
+                                        data-category="crypto">rsactftool</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ciphey"
+                                        data-category="crypto">ciphey</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="padbuster"
+                                        data-category="crypto">padbuster</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="hashpump"
+                                        data-category="crypto">hashpump</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="python-paddingoracle"
+                                        data-category="crypto">python-paddingoracle</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="rsa-wiener-attack"
+                                        data-category="crypto">rsa-wiener-attack</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="foresight"
+                                        data-category="crypto">foresight</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="hashkill"
+                                        data-category="crypto">hashkill</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="hashpump-partialhash"
+                                        data-category="crypto">hashpump-partialhash</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="pkcrack"
+                                        data-category="crypto">pkcrack</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="xortool"
+                                        data-category="crypto">xortool</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sage"
+                                        data-category="crypto">sage</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="z3" data-category="crypto">z3</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="bkcrack"
+                                        data-category="crypto">bkcrack</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="hashclash"
+                                        data-category="crypto">hashclash</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingDatabase">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseDatabase"
+                                    aria-expanded="false" aria-controls="flush-collapseDatabase">
+                                    Database&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="database-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseDatabase" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingDatabase">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('database')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('database')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="MysqlClientAttack"
+                                        data-category="database">MysqlClientAttack</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingDotnet">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseDotnet"
+                                    aria-expanded="false" aria-controls="flush-collapseDotnet">
+                                    Dotnet&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="dotnet-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseDotnet" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingDotnet">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('dotnet')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('dotnet')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ysoserialdotnet"
+                                        data-category="dotnet">ysoserialdotnet</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="IIS-ShortName-Scanner"
+                                        data-category="dotnet">IIS-ShortName-Scanner</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingForensics">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseForensics"
+                                    aria-expanded="false" aria-controls="flush-collapseForensics">
+                                    Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="forensics-counter">0</span>/7</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseForensics" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingForensics">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('forensics')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('forensics')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="volatility3"
+                                        data-category="forensics">volatility3</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="peepdf"
+                                        data-category="forensics">peepdf</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="dislocker"
+                                        data-category="forensics">dislocker</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sonic-visualiser"
+                                        data-category="forensics">sonic-visualiser</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ics-forensics-tools"
+                                        data-category="forensics">ics-forensics-tools</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="speakeasy"
+                                        data-category="forensics">speakeasy</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="dive"
+                                        data-category="forensics">dive</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingGem">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseGem" aria-expanded="false"
+                                    aria-controls="flush-collapseGem">
+                                    Gem&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="gem-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseGem" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingGem">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('gem')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('gem')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="zsteg" data-category="gem">zsteg</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingGo">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseGo" aria-expanded="false"
+                                    aria-controls="flush-collapseGo">
+                                    Go&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="go-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseGo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingGo">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('go')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('go')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sns" data-category="go">sns</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gospider"
+                                        data-category="go">gospider</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingJava">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseJava" aria-expanded="false"
+                                    aria-controls="flush-collapseJava">
+                                    Java&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="java-counter">0</span>/9</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseJava" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingJava">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('java')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('java')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ysoserial"
+                                        data-category="java">ysoserial</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="BaRMIe"
+                                        data-category="java">BaRMIe</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="remote-method-guesser"
+                                        data-category="java">remote-method-guesser</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="marshalsec"
+                                        data-category="java">marshalsec</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="SerializationDumper"
+                                        data-category="java">SerializationDumper</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gadgetinspector"
+                                        data-category="java">gadgetinspector</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="GadgetProbe"
+                                        data-category="java">GadgetProbe</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="JNDI-Injection-Bypass"
+                                        data-category="java">JNDI-Injection-Bypass</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="Java-Deserialization-Cheat-Sheet"
+                                        data-category="java">Java-Deserialization-Cheat-Sheet</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingMetadata">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseMetadata"
+                                    aria-expanded="false" aria-controls="flush-collapseMetadata">
+                                    Metadata&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="metadata-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseMetadata" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingMetadata">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('metadata')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('metadata')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="metagoofil"
+                                        data-category="metadata">metagoofil</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingMisc">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseMisc" aria-expanded="false"
+                                    aria-controls="flush-collapseMisc">
+                                    Misc&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="misc-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseMisc" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingMisc">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('misc')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('misc')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ippsec-cli"
+                                        data-category="misc">ippsec-cli</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="spoofcheck"
+                                        data-category="misc">spoofcheck</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingOsint">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOsint"
+                                    aria-expanded="false" aria-controls="flush-collapseOsint">
+                                    Osint&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="osint-counter">0</span>/5</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOsint" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingOsint">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('osint')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('osint')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="collector"
+                                        data-category="osint">collector</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sherlock"
+                                        data-category="osint">sherlock</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="creepy"
+                                        data-category="osint">creepy</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="h8mail"
+                                        data-category="osint">h8mail</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="infoooze"
+                                        data-category="osint">infoooze</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingPip3">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapsePip3" aria-expanded="false"
+                                    aria-controls="flush-collapsePip3">
+                                    Pip3&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="pip3-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapsePip3" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPip3">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('pip3')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('pip3')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="flask-unsign"
+                                        data-category="pip3">flask-unsign</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="stegoveritas"
+                                        data-category="pip3">stegoveritas</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingStego">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseStego"
+                                    aria-expanded="false" aria-controls="flush-collapseStego">
+                                    Stego&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="stego-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseStego" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingStego">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('stego')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('stego')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="stegsolver"
+                                        data-category="stego">stegsolver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingTunneling">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTunneling"
+                                    aria-expanded="false" aria-controls="flush-collapseTunneling">
+                                    Tunneling&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="tunneling-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTunneling" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingTunneling">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('tunneling')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('tunneling')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="chisel"
+                                        data-category="tunneling">chisel</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ptunnel-ng"
+                                        data-category="tunneling">ptunnel-ng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingPe-privesc">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapsePe-privesc"
+                                    aria-expanded="false" aria-controls="flush-collapsePe-privesc">
+                                    Pe-privesc&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="pe-privesc-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapsePe-privesc" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPe-privesc">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('pe-privesc')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('pe-privesc')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="peass-ng"
+                                        data-category="pe-privesc">peass-ng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingPe-shell">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapsePe-shell"
+                                    aria-expanded="false" aria-controls="flush-collapsePe-shell">
+                                    Pe-shell&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="pe-shell-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapsePe-shell" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPe-shell">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('pe-shell')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('pe-shell')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="pwncat"
+                                        data-category="pe-shell">pwncat</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingPe-windows">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapsePe-windows"
+                                    aria-expanded="false" aria-controls="flush-collapsePe-windows">
+                                    Pe-windows&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="pe-windows-counter">0</span>/3</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapsePe-windows" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPe-windows">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('pe-windows')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('pe-windows')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="mimikatz"
+                                        data-category="pe-windows">mimikatz</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="fullpowers"
+                                        data-category="pe-windows">fullpowers</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="powercat"
+                                        data-category="pe-windows">powercat</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingReversing-binary">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing-binary"
+                                    aria-expanded="false" aria-controls="flush-collapseReversing-binary">
+                                    Reversing-binary&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="reversing-binary-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseReversing-binary" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingReversing-binary">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('reversing-binary')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('reversing-binary')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="angr"
+                                        data-category="reversing-binary">angr</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingReversing-windows">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing-windows"
+                                    aria-expanded="false" aria-controls="flush-collapseReversing-windows">
+                                    Reversing-windows&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="reversing-windows-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseReversing-windows" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingReversing-windows">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('reversing-windows')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('reversing-windows')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="pyinstxtractor"
+                                        data-category="reversing-windows">pyinstxtractor</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="dnspy"
+                                        data-category="reversing-windows">dnspy</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingSpoofing-mitm">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseSpoofing-mitm"
+                                    aria-expanded="false" aria-controls="flush-collapseSpoofing-mitm">
+                                    Spoofing-mitm&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="spoofing-mitm-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSpoofing-mitm" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingSpoofing-mitm">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('spoofing-mitm')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('spoofing-mitm')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="responder"
+                                        data-category="spoofing-mitm">responder</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-amazon">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-amazon"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-amazon">
+                                    Web-amazon&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-amazon-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-amazon" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-amazon">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-amazon')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-amazon')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="nimbostratus"
+                                        data-category="web-amazon">nimbostratus</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-attacks">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-attacks"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-attacks">
+                                    Web-attacks&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-attacks-counter">0</span>/6</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-attacks" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-attacks">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-attacks')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-attacks')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="commix"
+                                        data-category="web-attacks">commix</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="mongomap"
+                                        data-category="web-attacks">mongomap</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="xsstrike"
+                                        data-category="web-attacks">xsstrike</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="crackql"
+                                        data-category="web-attacks">crackql</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="STEWS"
+                                        data-category="web-attacks">STEWS</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="nuclei"
+                                        data-category="web-attacks">nuclei</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-cookies">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-cookies"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-cookies">
+                                    Web-cookies&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-cookies-counter">0</span>/3</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-cookies" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-cookies">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-cookies')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-cookies')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="jwt_tool"
+                                        data-category="web-cookies">jwt_tool</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="jwt-key-recovery"
+                                        data-category="web-cookies">jwt-key-recovery</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="c-jwt-cracker"
+                                        data-category="web-cookies">c-jwt-cracker</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-crawler">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-crawler"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-crawler">
+                                    Web-crawler&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-crawler-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-crawler" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-crawler">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-crawler')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-crawler')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="webgrep"
+                                        data-category="web-crawler">webgrep</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="katana"
+                                        data-category="web-crawler">katana</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-dns">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-dns"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-dns">
+                                    Web-dns&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-dns-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-dns" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-dns">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-dns')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-dns')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="Gotator"
+                                        data-category="web-dns">Gotator</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-recon">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-recon"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-recon">
+                                    Web-recon&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-recon-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-recon" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-recon">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-recon')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-recon')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="aquatone"
+                                        data-category="web-recon">aquatone</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="amass"
+                                        data-category="web-recon">amass</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-ruby">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-ruby"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-ruby">
+                                    Web-ruby&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-ruby-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-ruby" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-ruby">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-ruby')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-ruby')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ronin-vulns"
+                                        data-category="web-ruby">ronin-vulns</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-sap">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-sap"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-sap">
+                                    Web-sap&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-sap-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-sap" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-sap">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-sap')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-sap')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sncscan"
+                                        data-category="web-sap">sncscan</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-scanners">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-scanners"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-scanners">
+                                    Web-scanners&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-scanners-counter">0</span>/7</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-scanners" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-scanners">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-scanners')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-scanners')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="finalrecon"
+                                        data-category="web-scanners">finalrecon</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="whatweb"
+                                        data-category="web-scanners">whatweb</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="rustscan"
+                                        data-category="web-scanners">rustscan</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="gittools"
+                                        data-category="web-scanners">gittools</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="ssrfmap"
+                                        data-category="web-scanners">ssrfmap</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="subbrute"
+                                        data-category="web-scanners">subbrute</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="smbmap"
+                                        data-category="web-scanners">smbmap</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-shell">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-shell"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-shell">
+                                    Web-shell&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-shell-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-shell" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-shell">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-shell')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-shell')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="vortex-php-webshell"
+                                        data-category="web-shell">vortex-php-webshell</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-ssti">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-ssti"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-ssti">
+                                    Web-ssti&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-ssti-counter">0</span>/3</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-ssti" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-ssti">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-ssti')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-ssti')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="tplmap-ssti-"
+                                        data-category="web-ssti">tplmap-ssti-</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sstimap"
+                                        data-category="web-ssti">sstimap</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="tplmap"
+                                        data-category="web-ssti">tplmap</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-tlsssl">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-tlsssl"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-tlsssl">
+                                    Web-tlsssl&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-tlsssl-counter">0</span>/2</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-tlsssl" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-tlsssl">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-tlsssl')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-tlsssl')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="sslstrip"
+                                        data-category="web-tlsssl">sslstrip</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="tls-attacker"
+                                        data-category="web-tlsssl">tls-attacker</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-unicode">
+                                <button class="accordion-button collapsed bg-dark text-white border" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-unicode"
+                                    aria-expanded="false" aria-controls="flush-collapseWeb-unicode">
+                                    Web-unicode&nbsp;<span class="badge badge-light bg-light text-dark"><span
+                                            id="web-unicode-counter">0</span>/1</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseWeb-unicode" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-unicode">
+                                <div class="accordion-body">
+                                    <button class="btn btn-success border-white m-1" type="button"
+                                        onclick="allTools('web-unicode')">ALL</button>
+                                    <button class="btn btn-danger border-white m-1" type="button"
+                                        onclick="noneTools('web-unicode')">None</button>
+                                    <button class="btn btn-dark border-white m-1" type="button"
+                                        onclick="buttonPress(this)" data-name="unisec"
+                                        data-category="web-unicode">unisec</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 right-side border">
+                <div class="container p-4">
+                    <h4>Installation directory</h4>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">$TOOLS = $HOME/</span>
+                        <input id="tools-path" type="text" class="form-control" placeholder="Username"
+                            aria-label="Username" aria-describedby="basic-addon1" value="Tools">
+                        <button class="btn btn-dark border-white" type="button" onclick="downloadScript()">Generate
+                            script</button>
+                    </div>
+                    <hr>
+                    <code id="script-output" style="color:white">
+          </code>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/prism.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/buttonPress.js"></script>
+</body>
+
+</html>

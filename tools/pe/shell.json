@@ -1,0 +1,3 @@
+{
+"pwncat":"git -C $TPATH clone https://github.com/calebstewart/pwncat.git"
+}

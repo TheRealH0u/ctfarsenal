@@ -1,0 +1,4 @@
+{
+"sslstrip":"git -C $TPATH clone https://github.com/moxie0/sslstrip.git",
+"tls-attacker":"git -C $TPATH clone https://github.com/tls-attacker/TLS-Attacker.git"
+}

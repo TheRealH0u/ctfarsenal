@@ -1,0 +1,3 @@
+{
+    "MysqlClientAttack": "git -C $TPATH clone https://github.com/lcark/MysqlClientAttack.git"
+}

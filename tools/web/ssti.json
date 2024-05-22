@@ -1,0 +1,5 @@
+{
+"tplmap-ssti-":"git -C $TPATH clone https://github.com/rcarry/tplmap-SSTI-.git",
+"sstimap":"git -C $TPATH clone https://github.com/vladko312/SSTImap.git",
+"tplmap": "git -C $TPATH clone https://github.com/epinna/tplmap.git"
+}

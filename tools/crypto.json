@@ -1,0 +1,17 @@
+{
+    "rsactftool": "git -C $TPATH clone https://github.com/Ganapati/RsaCtfTool.git",
+    "ciphey": "git -C $TPATH clone https://github.com/Ciphey/Ciphey.git",
+    "padbuster": "git -C $TPATH clone https://github.com/AonCyberLabs/PadBuster.git",
+    "hashpump": "git -C $TPATH clone https://github.com/bwall/HashPump.git",
+    "python-paddingoracle": "git -C $TPATH clone https://github.com/mwielgoszewski/python-paddingoracle.git",
+    "rsa-wiener-attack": "git -C $TPATH clone https://github.com/pablocelayes/rsa-wiener-attack.git",
+    "foresight": "git -C $TPATH clone https://github.com/ALSchwalm/foresight.git",
+    "hashkill": "git -C $TPATH clone https://github.com/gat3way/hashkill.git",
+    "hashpump-partialhash": "git -C $TPATH clone https://github.com/mheistermann/HashPump-partialhash.git",
+    "pkcrack": "git -C $TPATH clone https://github.com/keyunluo/pkcrack.git",
+    "xortool": "git -C $TPATH clone https://github.com/hellman/xortool.git",
+    "sage": "git -C $TPATH clone https://github.com/sagemath/sage.git",
+    "z3": "git -C $TPATH clone https://github.com/Z3Prover/z3.git",
+    "bkcrack": "git -C $TPATH clone https://github.com/kimci86/bkcrack.git",
+    "hashclash": "git -C $TPATH clone https://github.com/cr-marcstevens/hashclash.git"
+}

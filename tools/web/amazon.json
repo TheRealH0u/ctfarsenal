@@ -1,0 +1,3 @@
+{
+    "nimbostratus":"git -C $TPATH clone git@github.com:andresriancho/nimbostratus.git"
+}

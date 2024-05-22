@@ -1,0 +1,5 @@
+{
+    "jwt_tool": "git -C $TPATH clone https://github.com/ticarpi/jwt_tool.git",
+    "jwt-key-recovery": "git -C $TPATH clone https://github.com/FlorianPicca/JWT-Key-Recovery.git",
+    "c-jwt-cracker": "git -C $TPATH clone https://github.com/brendan-rius/c-jwt-cracker.git"
+}

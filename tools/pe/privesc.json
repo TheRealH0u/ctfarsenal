@@ -1,0 +1,3 @@
+{
+"peass-ng":"git -C $TPATH clone https://github.com/carlospolop/PEASS-ng.git"
+}

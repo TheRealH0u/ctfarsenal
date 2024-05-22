@@ -1,0 +1,3 @@
+{
+    "Gotator": "git -C $TPATH clone https://github.com/Josue87/gotator.git"
+}

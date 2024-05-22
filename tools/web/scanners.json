@@ -1,0 +1,9 @@
+{
+    "finalrecon": "git -C $TPATH clone https://github.com/thewhiteh4t/FinalRecon.git",
+    "whatweb": "git -C $TPATH clone https://github.com/urbanadventurer/WhatWeb.git",
+    "rustscan": "git -C $TPATH clone https://github.com/RustScan/RustScan.git",
+    "gittools": "git -C $TPATH clone https://github.com/internetwache/GitTools.git",
+    "ssrfmap": "git -C $TPATH clone https://github.com/swisskyrepo/SSRFmap.git",
+    "subbrute": "git -C $TPATH clone https://github.com/TheRook/subbrute.git",
+    "smbmap": "git -C $TPATH clone https://github.com/ShawnDEvans/smbmap.git"
+}

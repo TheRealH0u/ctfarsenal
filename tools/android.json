@@ -1,0 +1,4 @@
+{
+    "genymotion": "wget -O $TPATH/genymotion.bin https://dl.genymotion.com/releases/genymotion-3.3.0/genymotion-3.3.0-linux_x64.bin && chmod +x $TPATH/genymotion.bin && bash $TPATH/genymotion.bin",
+    "slicer": "git -C $TPATH clone https://github.com/mzfr/slicer.git"
+}

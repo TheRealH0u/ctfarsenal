@@ -1,0 +1,4 @@
+{
+    "ysoserialdotnet": "git -C $TPATH clone https://github.com/pwntester/ysoserial.net.git",
+    "IIS-ShortName-Scanner": "git -C $TPATH clone https://github.com/irsdl/IIS-ShortName-Scanner.git"
+}

@@ -1,0 +1,11 @@
+{
+    "ysoserial": "git -C $TPATH clone https://github.com/frohoff/ysoserial.git",
+    "BaRMIe": "git -C $TPATH clone https://github.com/NickstaDB/BaRMIe.git",
+    "remote-method-guesser": "git -C $TPATH clone https://github.com/qtc-de/remote-method-guesser.git",
+    "marshalsec": "git -C $TPATH clone https://github.com/mbechler/marshalsec.git",
+    "SerializationDumper": "git -C $TPATH clone https://github.com/NickstaDB/SerializationDumper.git",
+    "gadgetinspector": "git -C $TPATH clone https://github.com/JackOfMostTrades/gadgetinspector.git",
+    "GadgetProbe": "git -C $TPATH clone https://github.com/BishopFox/GadgetProbe.git",
+    "JNDI-Injection-Bypass": "git -C $TPATH clone https://github.com/welk1n/JNDI-Injection-Bypass.git",
+    "Java-Deserialization-Cheat-Sheet": "git -C $TPATH clone https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet.git"
+}

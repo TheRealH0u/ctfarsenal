@@ -1,0 +1,4 @@
+{
+"chisel":"git -C $TPATH clone https://github.com/jpillora/chisel.git",
+"ptunnel-ng":"git -C $TPATH clone https://github.com/utoni/ptunnel-ng.git"
+}

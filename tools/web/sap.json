@@ -1,0 +1,3 @@
+{
+"sncscan":"git -C $TPATH clone https://github.com/usdAG/sncscan.git"
+}

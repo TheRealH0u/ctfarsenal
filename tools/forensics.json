@@ -1,0 +1,9 @@
+{
+    "volatility3": "git -C $TPATH clone https://github.com/volatilityfoundation/volatility3.git",
+    "peepdf": "git -C $TPATH clone https://github.com/jesparza/peepdf.git",
+    "dislocker": "git -C $TPATH clone https://github.com/Aorimn/dislocker.git",
+    "sonic-visualiser": "git -C $TPATH clone https://github.com/sonic-visualiser/sonic-visualiser.git",
+    "ics-forensics-tools": "git -C $TPATH clone https://github.com/microsoft/ics-forensics-tools.git",
+    "speakeasy": "git -C $TPATH clone https://github.com/mandiant/speakeasy.git",
+    "dive":"git -C $TPATH clone https://github.com/wagoodman/dive.git"
+}

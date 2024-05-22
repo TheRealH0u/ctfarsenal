@@ -1,0 +1,7 @@
+{
+"collector":"git -C $TPATH clone https://github.com/galihap76/collector.git",
+"sherlock":"git -C $TPATH clone https://github.com/sherlock-project/sherlock.git",
+"creepy":"git -C $TPATH clone https://github.com/jkakavas/creepy.git",
+"h8mail":"git -C $TPATH clone https://github.com/khast3x/h8mail.git",
+"infoooze": "git -C $TPATH clone https://github.com/devXprite/infoooze.git"
+}

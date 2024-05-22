@@ -1,0 +1,3 @@
+{
+"angr":"git -C $TPATH clone https://github.com/angr/angr.git"
+}

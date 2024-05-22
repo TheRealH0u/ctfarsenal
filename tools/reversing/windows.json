@@ -1,0 +1,4 @@
+{
+"pyinstxtractor":"git -C $TPATH clone https://github.com/extremecoders-re/pyinstxtractor.git",
+"dnspy":"git -C $TPATH clone https://github.com/dnSpy/dnSpy.git"
+}

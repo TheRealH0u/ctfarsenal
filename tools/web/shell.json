@@ -1,0 +1,3 @@
+{
+"vortex-php-webshell":"git -C $TPATH clone https://github.com/bear102/Vortex-php-webshell.git"
+}

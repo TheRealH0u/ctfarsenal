@@ -1,0 +1,3 @@
+{
+"ronin-vulns":"git -C $TPATH clone https://github.com/ronin-rb/ronin-vulns.git"
+}
