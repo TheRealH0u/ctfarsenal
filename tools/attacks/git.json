@@ -3,6 +3,5 @@
     "mongomap": "git -C $TPATH clone https://github.com/Hex27/mongomap.git",
     "xsstrike": "git -C $TPATH clone https://github.com/s0md3v/XSStrike.git",
     "crackql": "git -C $TPATH clone https://github.com/nicholasaleks/CrackQL.git",
-    "STEWS": "git -C $TPATH clone https://github.com/PalindromeLabs/STEWS.git",
-    "nuclei": "git -C $TPATH clone https://github.com/projectdiscovery/nuclei.git"
+    "STEWS": "git -C $TPATH clone https://github.com/PalindromeLabs/STEWS.git"
 }

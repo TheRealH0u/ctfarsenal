@@ -8,7 +8,7 @@
     "docker": "Docker is an open-source platform designed to automate the deployment, scaling, and management of applications using containerization. Containers are lightweight, portable units of software that include everything needed to run an application.",
     "docker-compose": "Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure the application's services, allowing for simplified orchestration and scaling of complex applications.",
     "gpp": "GPP (GNU preprocessor) is a general-purpose preprocessor with customizable syntax, typically used in programming to include files, define macros, and conditionally compile code.",
-    "g++": "The GNU C++ compiler, part of the GNU Compiler Collection (GCC), used for compiling C++ programs.",
+    "gplusplus": "The GNU C++ compiler, part of the GNU Compiler Collection (GCC), used for compiling C++ programs.",
     "gcc": "GCC (GNU Compiler Collection) is a compiler system produced by the GNU Project supporting various programming languages such as C, C++, and Fortran. It is widely used for compiling and building software from source code.",
     "gdb": "GDB (GNU Debugger) is a portable debugger that works with many programming languages, including C and C++. It allows developers to see what is happening inside a program while it runs or what it was doing when it crashed.",
     "ltrace": "Ltrace is a debugging utility that intercepts and records the dynamic library calls made by a running process. It is useful for monitoring and diagnosing program behavior and interactions with shared libraries.",

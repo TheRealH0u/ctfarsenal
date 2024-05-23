@@ -1,5 +1,0 @@
-{
-"mimikatz":"git -C $TPATH clone https://github.com/gentilkiwi/mimikatz.git",
-"fullpowers":"git -C $TPATH clone https://github.com/itm4n/FullPowers.git",
-"powercat":"git -C $TPATH clone https://github.com/besimorhino/powercat.git"
-}

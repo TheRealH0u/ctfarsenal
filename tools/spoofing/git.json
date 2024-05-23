@@ -1,0 +1,3 @@
+{
+    "spoofcheck":"git -C $TPATH clone https://github.com/BishopFox/spoofcheck.git"
+}

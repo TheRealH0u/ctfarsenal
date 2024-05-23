@@ -1,4 +1,0 @@
-{
-"ippsec-cli":"git -C $TPATH clone https://github.com/stark0de/ippsec-cli.git",
-"spoofcheck":"git -C $TPATH clone https://github.com/BishopFox/spoofcheck.git"
-}

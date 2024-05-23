@@ -29,6 +29,23 @@ CTF Arsenal
 <div class="accordion accordion-flush" id="accordionFlush">
 
 <div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingAmazon">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseAmazon" aria-expanded="false"
+aria-controls="flush-collapseAmazon">
+Amazon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="amazon-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseAmazon" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingAmazon">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('amazon')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('amazon')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="nimbostratus" data-category="amazon" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Nimbostratus is a toolkit for testing AWS security. It helps in identifying and exploiting misconfigurations and vulnerabilities in Amazon Web Services environments.">nimbostratus</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
 <h2 class="accordion-header bg-dark text-white" id="flush-headingAndroid">
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseAndroid" aria-expanded="false"
@@ -40,54 +57,86 @@ Android&nbsp;<span class="badge badge-light bg-light text-dark"><span id="androi
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('android')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('android')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="genymotion" data-category="android" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Genymotion is a fast Android emulator based on VirtualBox, designed to run and test Android applications on Windows, macOS, and Linux.">genymotion</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="slicer" data-category="android" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="A tool to automate the recon process on an APK file. Returns all the activities, receivers, and services which are exported and have null permissions and can be externally provoked.">slicer</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="slicer" data-category="android" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="A tool to automate the recon process on an APK file. Returns all the activities, receivers, and services which are exported and have null permissions and can be externally provoked.">slicer</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="genymotion" data-category="android" data-installation="wget" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Genymotion is a fast Android emulator based on VirtualBox, designed to run and test Android applications on Windows, macOS, and Linux.">genymotion</button>
 </div>
 </div>
 </div>
 
 <div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingApt">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingAttacks">
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseApt" aria-expanded="false"
-aria-controls="flush-collapseApt">
-Apt&nbsp;<span class="badge badge-light bg-light text-dark"><span id="apt-counter">0</span>/30</span>
+data-bs-toggle="collapse" data-bs-target="#flush-collapseAttacks" aria-expanded="false"
+aria-controls="flush-collapseAttacks">
+Attacks&nbsp;<span class="badge badge-light bg-light text-dark"><span id="attacks-counter">0</span>/5</span>
 </button>
 </h2>
-<div id="flush-collapseApt" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingApt">
+<div id="flush-collapseAttacks" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingAttacks">
 <div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('apt')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('apt')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="git" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Git is a distributed version control system used for tracking changes in source code during software development. It enables multiple developers to work on a project simultaneously, allows for version tracking, branching, and merging, and supports collaboration and code review.">git</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="python3-scrapy" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Scrapy is an open-source web crawling framework for Python. It is used to extract data from websites, process and store it. Scrapy is highly efficient for web scraping and can handle a wide range of web crawling needs.">python3-scrapy</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="python3-pwntools" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Pwntools is a CTF (Capture The Flag) framework and exploit development library for Python. It simplifies the process of writing and exploiting binary challenges, offering utilities for working with processes, network connections, and more.">python3-pwntools</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pff-tools" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PFF (Plaso Format File) tools are used for processing and analyzing forensic timelines. They assist in the extraction, parsing, and analysis of data from various sources to create a timeline of events.">pff-tools</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="docker" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Docker is an open-source platform designed to automate the deployment, scaling, and management of applications using containerization. Containers are lightweight, portable units of software that include everything needed to run an application.">docker</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="docker-compose" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure the application's services, allowing for simplified orchestration and scaling of complex applications.">docker-compose</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="g++" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="The GNU C++ compiler, part of the GNU Compiler Collection (GCC), used for compiling C++ programs.">g++</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gcc" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GCC (GNU Compiler Collection) is a compiler system produced by the GNU Project supporting various programming languages such as C, C++, and Fortran. It is widely used for compiling and building software from source code.">gcc</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gdb" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GDB (GNU Debugger) is a portable debugger that works with many programming languages, including C and C++. It allows developers to see what is happening inside a program while it runs or what it was doing when it crashed.">gdb</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ltrace" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ltrace is a debugging utility that intercepts and records the dynamic library calls made by a running process. It is useful for monitoring and diagnosing program behavior and interactions with shared libraries.">ltrace</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="strace" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Strace is a diagnostic tool for monitoring and taming interactions between user-space processes and the Linux kernel, including system calls, signals, and process state changes.">strace</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="foremost" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Foremost is a forensic program for recovering files based on their headers, footers, and internal data structures. It is often used in digital forensics to recover deleted files from disk images.">foremost</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="steghide" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Steghide is a steganography tool that hides data in various kinds of image and audio files. It supports encryption of embedded data and can extract the hidden information when provided with the correct passphrase.">steghide</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="exiftool" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ExifTool is a platform-independent Perl library and command-line application for reading, writing, and editing metadata in a wide variety of file formats, including images, videos, and PDFs.">exiftool</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sshuttle" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sshuttle is a transparent proxy server that works with SSH to create a VPN-like connection. It allows for secure tunneling of network traffic through an SSH server without needing superuser privileges on the client side.">sshuttle</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gimp" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GIMP (GNU Image Manipulation Program) is a free and open-source raster graphics editor used for image retouching, editing, and authoring. It provides a wide range of tools for graphic design and photography.">gimp</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="inkscape" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Inkscape is a free and open-source vector graphics editor used to create and edit vector images. It supports various file formats and is used for creating illustrations, icons, logos, diagrams, and complex artwork.">inkscape</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="flameshot" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Flameshot is a powerful yet simple-to-use screenshot software for Unix-like operating systems. It offers a customizable user interface, annotation tools, and easy sharing options.">flameshot</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="remmina" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Remmina is a remote desktop client for POSIX-based computer operating systems. It supports multiple network protocols, including RDP, VNC, SPICE, NX, XDMCP, and SSH.">remmina</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ranger" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ranger is a console file manager with VI key bindings, offering a minimalist and efficient way to manage files from the terminal. It provides a preview of selected files and directories.">ranger</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="htop" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Htop is an interactive process viewer for Unix systems. It is a text-mode application that provides a dynamic real-time view of the system's processes, including CPU, memory usage, and more.">htop</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="redshift" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes by reducing the blue light emitted by your screen, particularly useful during nighttime work.">redshift</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pdfcrack" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Pdfcrack is a simple tool for recovering passwords from PDF files by using a brute-force algorithm. It is effective for unlocking encrypted PDF documents.">pdfcrack</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="fcrackzip" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Fcrackzip is a fast password cracker for ZIP archives. It attempts to guess the password using brute force or dictionary-based attacks.">fcrackzip</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="libwine" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Libwine is the core library of the Wine project, which allows the execution of Windows applications on Unix-like operating systems by translating Windows API calls into POSIX calls.">libwine</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pdf-parser" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PDF-Parser is a Python tool used to parse and analyze PDF documents. It helps in understanding the structure of PDF files and extracting meaningful content and metadata.">pdf-parser</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="lynx" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Lynx is a text-based web browser for use on terminal environments. It displays web pages as plain text and is useful for accessing the web in a low-bandwidth or text-only environment.">lynx</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="golang-go" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Go (also known as Golang) is an open-source programming language designed for simplicity, reliability, and efficiency. It is used for building high-performance applications and is known for its strong support for concurrent programming.">golang-go</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="albert" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Albert is a lightweight and fast launcher for Linux. It allows users to quickly find and open applications, files, and perform various tasks through a simple and extensible interface.">albert</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="seclists" data-category="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SecLists is a collection of multiple types of lists used during security assessments. These lists include usernames, passwords, URLs, sensitive data patterns, and other resources valuable for penetration testing and security analysis.">seclists</button>
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('attacks')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('attacks')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="commix" data-category="attacks" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Commix (Command Injection Exploiter) is a tool for testing web applications for command injection vulnerabilities. It automates the detection and exploitation of these security issues.">commix</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="mongomap" data-category="attacks" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="MongoMap is a tool for mapping and analyzing MongoDB instances. It helps in identifying misconfigurations and potential security vulnerabilities in MongoDB deployments.">mongomap</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="xsstrike" data-category="attacks" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="XSStrike is an advanced XSS (Cross-Site Scripting) detection suite. It provides tools for finding and exploiting XSS vulnerabilities in web applications.">xsstrike</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="crackql" data-category="attacks" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="CrackQL is a tool for testing SQL injection vulnerabilities. It automates the process of detecting and exploiting SQL injection flaws in web applications.">crackql</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="STEWS" data-category="attacks" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="STEWS (Structured Threat Emulation and Web Simulation) is a framework for simulating web attacks and testing the security of web applications. It provides tools for creating and executing attack scenarios.">STEWS</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingBinaryexploit">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseBinaryexploit" aria-expanded="false"
+aria-controls="flush-collapseBinaryexploit">
+Binaryexploit&nbsp;<span class="badge badge-light bg-light text-dark"><span id="binaryExploit-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseBinaryexploit" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingBinaryexploit">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('binaryExploit')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('binaryExploit')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="python3-pwntools" data-category="binaryExploit" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Pwntools is a CTF (Capture The Flag) framework and exploit development library for Python. It simplifies the process of writing and exploiting binary challenges, offering utilities for working with processes, network connections, and more.">python3-pwntools</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingCookies">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseCookies" aria-expanded="false"
+aria-controls="flush-collapseCookies">
+Cookies&nbsp;<span class="badge badge-light bg-light text-dark"><span id="cookies-counter">0</span>/4</span>
+</button>
+</h2>
+<div id="flush-collapseCookies" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingCookies">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('cookies')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('cookies')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="jwt_tool" data-category="cookies" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="JWT Tool is a toolkit for testing JSON Web Tokens (JWTs). It includes functionality for cracking, forging, and manipulating JWTs. It is useful for security researchers and penetration testers to analyze the security of JWT implementations.">jwt_tool</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="jwt-key-recovery" data-category="cookies" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="JWT-Key-Recovery is a tool used to recover the secret key used to sign JSON Web Tokens (JWTs). It employs brute force or dictionary attacks to identify the key, which can then be used to forge JWTs or analyze their security.">jwt-key-recovery</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="c-jwt-cracker" data-category="cookies" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="C-JWT-Cracker is a tool designed to brute force crack JSON Web Tokens (JWTs). It attempts to find the secret key used to sign the JWT by testing multiple possible values, aiding in the security analysis of JWT implementations.">c-jwt-cracker</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="flask-unsign" data-category="cookies" data-installation="pip3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Flask-Unsign is a tool for cracking and forging Flask session cookies. It helps security professionals test Flask applications for weak session management and potential vulnerabilities.">flask-unsign</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingCrawler">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseCrawler" aria-expanded="false"
+aria-controls="flush-collapseCrawler">
+Crawler&nbsp;<span class="badge badge-light bg-light text-dark"><span id="crawler-counter">0</span>/4</span>
+</button>
+</h2>
+<div id="flush-collapseCrawler" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingCrawler">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('crawler')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('crawler')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="python3-scrapy" data-category="crawler" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Scrapy is an open-source web crawling framework for Python. It is used to extract data from websites, process and store it. Scrapy is highly efficient for web scraping and can handle a wide range of web crawling needs.">python3-scrapy</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="webgrep" data-category="crawler" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Webgrep is a tool used for searching and extracting data from web pages. It helps automate the process of retrieving specific information from websites based on patterns or keywords.">webgrep</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="katana" data-category="crawler" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Katana is a next-generation crawler designed for modern web applications. It can parse and interact with JavaScript-heavy sites, allowing it to discover more endpoints and parameters than traditional crawlers.">katana</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gospider" data-category="crawler" data-installation="go" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GoSpider is a fast web spider written in Go, designed for crawling websites and extracting links. It is used for reconnaissance and mapping the structure of web applications.">gospider</button>
 </div>
 </div>
 </div>
@@ -97,28 +146,30 @@ Apt&nbsp;<span class="badge badge-light bg-light text-dark"><span id="apt-counte
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseCrypto" aria-expanded="false"
 aria-controls="flush-collapseCrypto">
-Crypto&nbsp;<span class="badge badge-light bg-light text-dark"><span id="crypto-counter">0</span>/15</span>
+Crypto&nbsp;<span class="badge badge-light bg-light text-dark"><span id="crypto-counter">0</span>/17</span>
 </button>
 </h2>
 <div id="flush-collapseCrypto" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingCrypto">
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('crypto')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('crypto')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="rsactftool" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="RSA CTF Tool is a tool for recovering RSA private keys by using a variety of mathematical attacks. It is often used in CTF (Capture The Flag) competitions and cryptographic analysis.">rsactftool</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ciphey" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ciphey is an automated decryption tool that uses artificial intelligence and natural language processing to decode ciphertexts. It is capable of solving a variety of encryption schemes and encodings.">ciphey</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="padbuster" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PadBuster is a tool for automated padding oracle attacks, which exploit padding oracle vulnerabilities in cryptographic implementations to decrypt and encrypt data without knowing the encryption key.">padbuster</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashpump" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HashPump is a tool used to exploit hash length extension attacks. It allows the user to add data to a hashed message and re-compute the hash without knowing the key.">hashpump</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="python-paddingoracle" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Python-PaddingOracle is a library and tool for performing padding oracle attacks on vulnerable cryptographic implementations. It is used to decrypt and encrypt data by exploiting padding validation errors.">python-paddingoracle</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="rsa-wiener-attack" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="RSA-Wiener-Attack is a tool that implements Wiener's attack to recover private keys from weak RSA public keys. It is useful for cryptographic research and analysis.">rsa-wiener-attack</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="foresight" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Foresight is a forensic analysis tool used for investigating disk images and file systems. It provides a range of features for data recovery and forensic examination.">foresight</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashkill" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Hashkill is a powerful and versatile password recovery tool that supports a wide range of hashing algorithms. It uses advanced cracking techniques, including dictionary and brute-force attacks.">hashkill</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashpump-partialhash" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HashPump-PartialHash is a variation of the HashPump tool that focuses on exploiting hash length extension attacks with partially known hashes.">hashpump-partialhash</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pkcrack" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Pkcrack is a tool for cracking encrypted ZIP archives using known plaintext attacks. It can recover the original plaintext and the encryption keys.">pkcrack</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="xortool" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="XORtool is a utility for analyzing and breaking XOR encryption. It helps identify the key and decrypt XOR-encrypted data.">xortool</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sage" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SageMath is an open-source mathematics software system that integrates numerous mathematics tools and libraries into a unified interface. It is used for algebra, calculus, and other mathematical computations.">sage</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="z3" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Z3 is a high-performance theorem prover developed by Microsoft Research. It is used for formal verification and solving logical problems in software analysis.">z3</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="bkcrack" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Bkcrack is a tool for breaking ZIP encryption by using known plaintext attacks. It can efficiently recover the original plaintext and encryption keys from encrypted ZIP files.">bkcrack</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashclash" data-category="crypto" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HashClash is a framework for finding hash collisions, particularly for MD5 and SHA-1. It is used in cryptographic research and vulnerability analysis.">hashclash</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pdfcrack" data-category="crypto" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Pdfcrack is a simple tool for recovering passwords from PDF files by using a brute-force algorithm. It is effective for unlocking encrypted PDF documents.">pdfcrack</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="fcrackzip" data-category="crypto" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Fcrackzip is a fast password cracker for ZIP archives. It attempts to guess the password using brute force or dictionary-based attacks.">fcrackzip</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="rsactftool" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="RSA CTF Tool is a tool for recovering RSA private keys by using a variety of mathematical attacks. It is often used in CTF (Capture The Flag) competitions and cryptographic analysis.">rsactftool</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ciphey" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ciphey is an automated decryption tool that uses artificial intelligence and natural language processing to decode ciphertexts. It is capable of solving a variety of encryption schemes and encodings.">ciphey</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="padbuster" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PadBuster is a tool for automated padding oracle attacks, which exploit padding oracle vulnerabilities in cryptographic implementations to decrypt and encrypt data without knowing the encryption key.">padbuster</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashpump" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HashPump is a tool used to exploit hash length extension attacks. It allows the user to add data to a hashed message and re-compute the hash without knowing the key.">hashpump</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="python-paddingoracle" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Python-PaddingOracle is a library and tool for performing padding oracle attacks on vulnerable cryptographic implementations. It is used to decrypt and encrypt data by exploiting padding validation errors.">python-paddingoracle</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="rsa-wiener-attack" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="RSA-Wiener-Attack is a tool that implements Wiener's attack to recover private keys from weak RSA public keys. It is useful for cryptographic research and analysis.">rsa-wiener-attack</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="foresight" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Foresight is a forensic analysis tool used for investigating disk images and file systems. It provides a range of features for data recovery and forensic examination.">foresight</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashkill" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Hashkill is a powerful and versatile password recovery tool that supports a wide range of hashing algorithms. It uses advanced cracking techniques, including dictionary and brute-force attacks.">hashkill</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashpump-partialhash" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HashPump-PartialHash is a variation of the HashPump tool that focuses on exploiting hash length extension attacks with partially known hashes.">hashpump-partialhash</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pkcrack" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Pkcrack is a tool for cracking encrypted ZIP archives using known plaintext attacks. It can recover the original plaintext and the encryption keys.">pkcrack</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="xortool" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="XORtool is a utility for analyzing and breaking XOR encryption. It helps identify the key and decrypt XOR-encrypted data.">xortool</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sage" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SageMath is an open-source mathematics software system that integrates numerous mathematics tools and libraries into a unified interface. It is used for algebra, calculus, and other mathematical computations.">sage</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="z3" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Z3 is a high-performance theorem prover developed by Microsoft Research. It is used for formal verification and solving logical problems in software analysis.">z3</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="bkcrack" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Bkcrack is a tool for breaking ZIP encryption by using known plaintext attacks. It can efficiently recover the original plaintext and encryption keys from encrypted ZIP files.">bkcrack</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="hashclash" data-category="crypto" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HashClash is a framework for finding hash collisions, particularly for MD5 and SHA-1. It is used in cryptographic research and vulnerability analysis.">hashclash</button>
 </div>
 </div>
 </div>
@@ -135,25 +186,24 @@ Database&nbsp;<span class="badge badge-light bg-light text-dark"><span id="datab
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('database')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('database')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="MysqlClientAttack" data-category="database" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="MysqlClientAttack is a tool designed to test MySQL servers for common misconfigurations and vulnerabilities. It simulates various client attacks to identify potential security weaknesses in MySQL deployments.">MysqlClientAttack</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="MysqlClientAttack" data-category="database" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="MysqlClientAttack is a tool designed to test MySQL servers for common misconfigurations and vulnerabilities. It simulates various client attacks to identify potential security weaknesses in MySQL deployments.">MysqlClientAttack</button>
 </div>
 </div>
 </div>
 
 <div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingDotnet">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingDns">
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseDotnet" aria-expanded="false"
-aria-controls="flush-collapseDotnet">
-Dotnet&nbsp;<span class="badge badge-light bg-light text-dark"><span id="dotnet-counter">0</span>/2</span>
+data-bs-toggle="collapse" data-bs-target="#flush-collapseDns" aria-expanded="false"
+aria-controls="flush-collapseDns">
+Dns&nbsp;<span class="badge badge-light bg-light text-dark"><span id="dns-counter">0</span>/1</span>
 </button>
 </h2>
-<div id="flush-collapseDotnet" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingDotnet">
+<div id="flush-collapseDns" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingDns">
 <div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('dotnet')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('dotnet')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ysoserialdotnet" data-category="dotnet" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ysoserial.net is a proof-of-concept tool for generating payloads that exploit unsafe .NET object deserialization. It helps security professionals test applications for vulnerabilities related to deserialization attacks.">ysoserialdotnet</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="IIS-ShortName-Scanner" data-category="dotnet" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="IIS ShortName Scanner is a tool used to detect short names of files and directories on Microsoft Internet Information Server (IIS). It leverages a vulnerability that reveals 8.3 filenames, potentially exposing sensitive information and aiding in further attacks.">IIS-ShortName-Scanner</button>
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('dns')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('dns')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="Gotator" data-category="dns" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Gotator is a tool used for rotating and combining wordlists for use in various security testing tasks. It helps in creating comprehensive wordlists by generating permutations and combinations of input data.">Gotator</button>
 </div>
 </div>
 </div>
@@ -163,55 +213,24 @@ Dotnet&nbsp;<span class="badge badge-light bg-light text-dark"><span id="dotnet-
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseForensics" aria-expanded="false"
 aria-controls="flush-collapseForensics">
-Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span id="forensics-counter">0</span>/7</span>
+Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span id="forensics-counter">0</span>/11</span>
 </button>
 </h2>
 <div id="flush-collapseForensics" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingForensics">
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('forensics')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('forensics')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="volatility3" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Volatility 3 is the latest version of an advanced memory forensics framework. It is used for analyzing volatile memory dumps to extract forensic artifacts and investigate malicious activity.">volatility3</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="peepdf" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="peepdf is a Python-based tool used to analyze and explore PDF files in a detailed manner. It helps in identifying potential malicious content and extracting useful information from PDF documents.">peepdf</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="dislocker" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Dislocker is a tool for reading and writing BitLocker encrypted volumes. It allows access to BitLocker-protected drives on Linux and macOS by mounting them and decrypting their contents.">dislocker</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sonic-visualiser" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sonic Visualiser is an application for viewing and analyzing the contents of audio files. It provides tools for detailed visual and audio analysis, including spectrograms, waveforms, and annotations.">sonic-visualiser</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ics-forensics-tools" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ICS Forensics Tools are a collection of utilities designed for analyzing and investigating Industrial Control Systems (ICS). These tools help in understanding and securing critical infrastructure components.">ics-forensics-tools</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="speakeasy" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Speakeasy is a binary analysis framework for emulating Windows malware. It provides a sandbox-like environment for executing and analyzing malware behavior in a controlled setting.">speakeasy</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="dive" data-category="forensics" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Dive is a tool for exploring Docker images, allowing users to visualize and analyze their contents layer by layer. It helps in optimizing images and identifying unnecessary files.">dive</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingGem">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseGem" aria-expanded="false"
-aria-controls="flush-collapseGem">
-Gem&nbsp;<span class="badge badge-light bg-light text-dark"><span id="gem-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseGem" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingGem">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('gem')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('gem')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="zsteg" data-category="gem" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="zsteg is a tool used for detecting hidden data in PNG and BMP files. It identifies steganographic content and other hidden information that might be embedded within images.">zsteg</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingGo">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseGo" aria-expanded="false"
-aria-controls="flush-collapseGo">
-Go&nbsp;<span class="badge badge-light bg-light text-dark"><span id="go-counter">0</span>/2</span>
-</button>
-</h2>
-<div id="flush-collapseGo" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingGo">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('go')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('go')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sns" data-category="go" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SNS, or Subdomain Name Scanner, is a tool for enumerating subdomains of a given domain. It is useful for discovering potentially vulnerable or unlisted subdomains.">sns</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gospider" data-category="go" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GoSpider is a fast web spider written in Go, designed for crawling websites and extracting links. It is used for reconnaissance and mapping the structure of web applications.">gospider</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pff-tools" data-category="forensics" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PFF (Plaso Format File) tools are used for processing and analyzing forensic timelines. They assist in the extraction, parsing, and analysis of data from various sources to create a timeline of events.">pff-tools</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="foremost" data-category="forensics" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Foremost is a forensic program for recovering files based on their headers, footers, and internal data structures. It is often used in digital forensics to recover deleted files from disk images.">foremost</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="exiftool" data-category="forensics" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ExifTool is a platform-independent Perl library and command-line application for reading, writing, and editing metadata in a wide variety of file formats, including images, videos, and PDFs.">exiftool</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pdf-parser" data-category="forensics" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PDF-Parser is a Python tool used to parse and analyze PDF documents. It helps in understanding the structure of PDF files and extracting meaningful content and metadata.">pdf-parser</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="volatility3" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Volatility 3 is the latest version of an advanced memory forensics framework. It is used for analyzing volatile memory dumps to extract forensic artifacts and investigate malicious activity.">volatility3</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="peepdf" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="peepdf is a Python-based tool used to analyze and explore PDF files in a detailed manner. It helps in identifying potential malicious content and extracting useful information from PDF documents.">peepdf</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="dislocker" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Dislocker is a tool for reading and writing BitLocker encrypted volumes. It allows access to BitLocker-protected drives on Linux and macOS by mounting them and decrypting their contents.">dislocker</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sonic-visualiser" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sonic Visualiser is an application for viewing and analyzing the contents of audio files. It provides tools for detailed visual and audio analysis, including spectrograms, waveforms, and annotations.">sonic-visualiser</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ics-forensics-tools" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ICS Forensics Tools are a collection of utilities designed for analyzing and investigating Industrial Control Systems (ICS). These tools help in understanding and securing critical infrastructure components.">ics-forensics-tools</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="speakeasy" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Speakeasy is a binary analysis framework for emulating Windows malware. It provides a sandbox-like environment for executing and analyzing malware behavior in a controlled setting.">speakeasy</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="dive" data-category="forensics" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Dive is a tool for exploring Docker images, allowing users to visualize and analyze their contents layer by layer. It helps in optimizing images and identifying unnecessary files.">dive</button>
 </div>
 </div>
 </div>
@@ -228,15 +247,15 @@ Java&nbsp;<span class="badge badge-light bg-light text-dark"><span id="java-coun
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('java')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('java')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ysoserial" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ysoserial is a tool for generating payloads that exploit unsafe Java object deserialization. It aids in testing and demonstrating deserialization vulnerabilities in Java applications.">ysoserial</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="BaRMIe" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="BaRMIe is a tool for discovering and exploiting Java RMI (Remote Method Invocation) endpoints. It helps identify exposed RMI services and potential security issues.">BaRMIe</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="remote-method-guesser" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Remote Method Guesser (RMG) is a tool for enumerating methods of Java RMI servers. It helps security professionals identify exposed RMI methods that could be vulnerable to exploitation.">remote-method-guesser</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="marshalsec" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Marshalsec is a collection of Java utilities for exploiting deserialization vulnerabilities. It includes payload generators and tools for testing various serialization formats.">marshalsec</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="SerializationDumper" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SerializationDumper is a tool for analyzing and dumping serialized Java objects. It helps in understanding the structure and contents of serialized data, aiding in security assessments.">SerializationDumper</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gadgetinspector" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GadgetInspector is a tool for analyzing Java bytecode to identify gadgets that can be used in deserialization attacks. It helps in finding potential exploitation vectors in Java applications.">gadgetinspector</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="GadgetProbe" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GadgetProbe is a tool for probing Java applications for exploitable deserialization gadgets. It automates the process of identifying classes that can be leveraged in deserialization attacks.">GadgetProbe</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="JNDI-Injection-Bypass" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="JNDI Injection Bypass is a technique and toolset for exploiting Java Naming and Directory Interface (JNDI) injection vulnerabilities. It allows attackers to bypass security controls and execute arbitrary code.">JNDI-Injection-Bypass</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="Java-Deserialization-Cheat-Sheet" data-category="java" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Java Deserialization Cheat Sheet is a reference guide for understanding and exploiting Java deserialization vulnerabilities. It provides examples and techniques for identifying and mitigating these issues.">Java-Deserialization-Cheat-Sheet</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ysoserial" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ysoserial is a tool for generating payloads that exploit unsafe Java object deserialization. It aids in testing and demonstrating deserialization vulnerabilities in Java applications.">ysoserial</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="BaRMIe" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="BaRMIe is a tool for discovering and exploiting Java RMI (Remote Method Invocation) endpoints. It helps identify exposed RMI services and potential security issues.">BaRMIe</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="remote-method-guesser" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Remote Method Guesser (RMG) is a tool for enumerating methods of Java RMI servers. It helps security professionals identify exposed RMI methods that could be vulnerable to exploitation.">remote-method-guesser</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="marshalsec" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Marshalsec is a collection of Java utilities for exploiting deserialization vulnerabilities. It includes payload generators and tools for testing various serialization formats.">marshalsec</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="SerializationDumper" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SerializationDumper is a tool for analyzing and dumping serialized Java objects. It helps in understanding the structure and contents of serialized data, aiding in security assessments.">SerializationDumper</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gadgetinspector" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GadgetInspector is a tool for analyzing Java bytecode to identify gadgets that can be used in deserialization attacks. It helps in finding potential exploitation vectors in Java applications.">gadgetinspector</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="GadgetProbe" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GadgetProbe is a tool for probing Java applications for exploitable deserialization gadgets. It automates the process of identifying classes that can be leveraged in deserialization attacks.">GadgetProbe</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="JNDI-Injection-Bypass" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="JNDI Injection Bypass is a technique and toolset for exploiting Java Naming and Directory Interface (JNDI) injection vulnerabilities. It allows attackers to bypass security controls and execute arbitrary code.">JNDI-Injection-Bypass</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="Java-Deserialization-Cheat-Sheet" data-category="java" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Java Deserialization Cheat Sheet is a reference guide for understanding and exploiting Java deserialization vulnerabilities. It provides examples and techniques for identifying and mitigating these issues.">Java-Deserialization-Cheat-Sheet</button>
 </div>
 </div>
 </div>
@@ -253,7 +272,26 @@ Metadata&nbsp;<span class="badge badge-light bg-light text-dark"><span id="metad
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('metadata')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('metadata')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="metagoofil" data-category="metadata" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Metagoofil is an information-gathering tool designed to extract metadata from publicly accessible documents. It helps in identifying sensitive information and potential security weaknesses.">metagoofil</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="metagoofil" data-category="metadata" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Metagoofil is an information-gathering tool designed to extract metadata from publicly accessible documents. It helps in identifying sensitive information and potential security weaknesses.">metagoofil</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingMicrosoft">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseMicrosoft" aria-expanded="false"
+aria-controls="flush-collapseMicrosoft">
+Microsoft&nbsp;<span class="badge badge-light bg-light text-dark"><span id="microsoft-counter">0</span>/3</span>
+</button>
+</h2>
+<div id="flush-collapseMicrosoft" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingMicrosoft">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('microsoft')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('microsoft')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ysoserialdotnet" data-category="microsoft" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ysoserial.net is a proof-of-concept tool for generating payloads that exploit unsafe .NET object deserialization. It helps security professionals test applications for vulnerabilities related to deserialization attacks.">ysoserialdotnet</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="IIS-ShortName-Scanner" data-category="microsoft" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="IIS ShortName Scanner is a tool used to detect short names of files and directories on Microsoft Internet Information Server (IIS). It leverages a vulnerability that reveals 8.3 filenames, potentially exposing sensitive information and aiding in further attacks.">IIS-ShortName-Scanner</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sns" data-category="microsoft" data-installation="go" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SNS, or Subdomain Name Scanner, is a tool for enumerating subdomains of a given domain. It is useful for discovering potentially vulnerable or unlisted subdomains.">sns</button>
 </div>
 </div>
 </div>
@@ -263,15 +301,48 @@ Metadata&nbsp;<span class="badge badge-light bg-light text-dark"><span id="metad
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseMisc" aria-expanded="false"
 aria-controls="flush-collapseMisc">
-Misc&nbsp;<span class="badge badge-light bg-light text-dark"><span id="misc-counter">0</span>/2</span>
+Misc&nbsp;<span class="badge badge-light bg-light text-dark"><span id="misc-counter">0</span>/18</span>
 </button>
 </h2>
 <div id="flush-collapseMisc" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingMisc">
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('misc')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('misc')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ippsec-cli" data-category="misc" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ippsec-cli is a command-line tool that provides access to IppSec's HackTheBox video content. It allows users to search and view walkthroughs and tutorials for various HTB challenges.">ippsec-cli</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="spoofcheck" data-category="misc" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SpoofCheck is a tool for checking email spoofing vulnerabilities. It examines SPF, DKIM, and DMARC configurations to determine if a domain is protected against email spoofing attacks.">spoofcheck</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="git" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Git is a distributed version control system used for tracking changes in source code during software development. It enables multiple developers to work on a project simultaneously, allows for version tracking, branching, and merging, and supports collaboration and code review.">git</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="docker" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Docker is an open-source platform designed to automate the deployment, scaling, and management of applications using containerization. Containers are lightweight, portable units of software that include everything needed to run an application.">docker</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="docker-compose" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Docker Compose is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure the application's services, allowing for simplified orchestration and scaling of complex applications.">docker-compose</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gplusplus" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="The GNU C++ compiler, part of the GNU Compiler Collection (GCC), used for compiling C++ programs.">gplusplus</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gcc" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GCC (GNU Compiler Collection) is a compiler system produced by the GNU Project supporting various programming languages such as C, C++, and Fortran. It is widely used for compiling and building software from source code.">gcc</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gimp" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GIMP (GNU Image Manipulation Program) is a free and open-source raster graphics editor used for image retouching, editing, and authoring. It provides a wide range of tools for graphic design and photography.">gimp</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="inkscape" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Inkscape is a free and open-source vector graphics editor used to create and edit vector images. It supports various file formats and is used for creating illustrations, icons, logos, diagrams, and complex artwork.">inkscape</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="flameshot" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Flameshot is a powerful yet simple-to-use screenshot software for Unix-like operating systems. It offers a customizable user interface, annotation tools, and easy sharing options.">flameshot</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="remmina" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Remmina is a remote desktop client for POSIX-based computer operating systems. It supports multiple network protocols, including RDP, VNC, SPICE, NX, XDMCP, and SSH.">remmina</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ranger" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ranger is a console file manager with VI key bindings, offering a minimalist and efficient way to manage files from the terminal. It provides a preview of selected files and directories.">ranger</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="htop" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Htop is an interactive process viewer for Unix systems. It is a text-mode application that provides a dynamic real-time view of the system's processes, including CPU, memory usage, and more.">htop</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="redshift" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes by reducing the blue light emitted by your screen, particularly useful during nighttime work.">redshift</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="libwine" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Libwine is the core library of the Wine project, which allows the execution of Windows applications on Unix-like operating systems by translating Windows API calls into POSIX calls.">libwine</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="lynx" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Lynx is a text-based web browser for use on terminal environments. It displays web pages as plain text and is useful for accessing the web in a low-bandwidth or text-only environment.">lynx</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="golang-go" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Go (also known as Golang) is an open-source programming language designed for simplicity, reliability, and efficiency. It is used for building high-performance applications and is known for its strong support for concurrent programming.">golang-go</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="albert" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Albert is a lightweight and fast launcher for Linux. It allows users to quickly find and open applications, files, and perform various tasks through a simple and extensible interface.">albert</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="seclists" data-category="misc" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SecLists is a collection of multiple types of lists used during security assessments. These lists include usernames, passwords, URLs, sensitive data patterns, and other resources valuable for penetration testing and security analysis.">seclists</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ippsec-cli" data-category="misc" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ippsec-cli is a command-line tool that provides access to IppSec's HackTheBox video content. It allows users to search and view walkthroughs and tutorials for various HTB challenges.">ippsec-cli</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingMitm">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseMitm" aria-expanded="false"
+aria-controls="flush-collapseMitm">
+Mitm&nbsp;<span class="badge badge-light bg-light text-dark"><span id="mitm-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseMitm" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingMitm">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('mitm')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('mitm')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="responder" data-category="mitm" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Responder is a tool for LLMNR, NBT-NS, and MDNS poisoning. It is used to capture network credentials by exploiting weaknesses in name resolution protocols on local networks.">responder</button>
 </div>
 </div>
 </div>
@@ -288,29 +359,200 @@ Osint&nbsp;<span class="badge badge-light bg-light text-dark"><span id="osint-co
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('osint')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('osint')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="collector" data-category="osint" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Collector is a tool for aggregating and analyzing data from various sources. It is used for gathering intelligence and insights from diverse datasets, aiding in security and research activities.">collector</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sherlock" data-category="osint" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sherlock is a tool for finding usernames across social networks. It helps in identifying user accounts on different platforms based on a given username.">sherlock</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="creepy" data-category="osint" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Creepy is a geolocation OSINT tool for extracting and visualizing geolocation information from social networking platforms. It aids in tracking and analyzing the location data of individuals.">creepy</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="h8mail" data-category="osint" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="h8mail is a tool for finding and verifying breached email accounts. It searches multiple breach data sources and provides information on compromised email addresses.">h8mail</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="infoooze" data-category="osint" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="InfoOoze is an OSINT tool for gathering information from various online sources. It helps in collecting data related to email addresses, phone numbers, and social media profiles.">infoooze</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="collector" data-category="osint" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Collector is a tool for aggregating and analyzing data from various sources. It is used for gathering intelligence and insights from diverse datasets, aiding in security and research activities.">collector</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sherlock" data-category="osint" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sherlock is a tool for finding usernames across social networks. It helps in identifying user accounts on different platforms based on a given username.">sherlock</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="creepy" data-category="osint" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Creepy is a geolocation OSINT tool for extracting and visualizing geolocation information from social networking platforms. It aids in tracking and analyzing the location data of individuals.">creepy</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="h8mail" data-category="osint" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="h8mail is a tool for finding and verifying breached email accounts. It searches multiple breach data sources and provides information on compromised email addresses.">h8mail</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="infoooze" data-category="osint" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="InfoOoze is an OSINT tool for gathering information from various online sources. It helps in collecting data related to email addresses, phone numbers, and social media profiles.">infoooze</button>
 </div>
 </div>
 </div>
 
 <div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingPip3">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingPostexploit">
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapsePip3" aria-expanded="false"
-aria-controls="flush-collapsePip3">
-Pip3&nbsp;<span class="badge badge-light bg-light text-dark"><span id="pip3-counter">0</span>/2</span>
+data-bs-toggle="collapse" data-bs-target="#flush-collapsePostexploit" aria-expanded="false"
+aria-controls="flush-collapsePostexploit">
+Postexploit&nbsp;<span class="badge badge-light bg-light text-dark"><span id="postExploit-counter">0</span>/3</span>
 </button>
 </h2>
-<div id="flush-collapsePip3" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPip3">
+<div id="flush-collapsePostexploit" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPostexploit">
 <div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('pip3')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('pip3')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="flask-unsign" data-category="pip3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Flask-Unsign is a tool for cracking and forging Flask session cookies. It helps security professionals test Flask applications for weak session management and potential vulnerabilities.">flask-unsign</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="stegoveritas" data-category="pip3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="StegoVeritas is a steganography analysis tool designed to detect and extract hidden information in images. It supports various steganographic techniques and aids in uncovering concealed data.">stegoveritas</button>
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('postExploit')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('postExploit')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="mimikatz" data-category="postExploit" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Mimikatz is a powerful post-exploitation tool for Windows that extracts plaintext passwords, hashes, PINs, and Kerberos tickets from memory. It is widely used for credential dumping and lateral movement.">mimikatz</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="fullpowers" data-category="postExploit" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="FullPowers is a tool for obtaining full administrative privileges on Windows systems. It exploits misconfigurations and vulnerabilities to elevate user privileges.">fullpowers</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="peass-ng" data-category="postExploit" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PEASS-ng (Privilege Escalation Awesome Scripts SUITE) is a collection of scripts for finding local privilege escalation vulnerabilities on Unix and Windows systems.">peass-ng</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingProxy">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseProxy" aria-expanded="false"
+aria-controls="flush-collapseProxy">
+Proxy&nbsp;<span class="badge badge-light bg-light text-dark"><span id="proxy-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseProxy" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingProxy">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('proxy')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('proxy')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sshuttle" data-category="proxy" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sshuttle is a transparent proxy server that works with SSH to create a VPN-like connection. It allows for secure tunneling of network traffic through an SSH server without needing superuser privileges on the client side.">sshuttle</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingRecon">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseRecon" aria-expanded="false"
+aria-controls="flush-collapseRecon">
+Recon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="recon-counter">0</span>/2</span>
+</button>
+</h2>
+<div id="flush-collapseRecon" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingRecon">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('recon')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('recon')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="aquatone" data-category="recon" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Aquatone is a tool for visual inspection of websites across a large number of hosts. It provides a convenient way to gather screenshots and identify interesting or vulnerable web applications.">aquatone</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="amass" data-category="recon" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Amass is an advanced open-source tool for network mapping and attack surface discovery. It helps in performing DNS enumeration, subdomain discovery, and infrastructure mapping for identifying potential entry points.">amass</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingReversing">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing" aria-expanded="false"
+aria-controls="flush-collapseReversing">
+Reversing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="reversing-counter">0</span>/6</span>
+</button>
+</h2>
+<div id="flush-collapseReversing" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingReversing">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('reversing')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('reversing')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gdb" data-category="reversing" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GDB (GNU Debugger) is a portable debugger that works with many programming languages, including C and C++. It allows developers to see what is happening inside a program while it runs or what it was doing when it crashed.">gdb</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ltrace" data-category="reversing" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ltrace is a debugging utility that intercepts and records the dynamic library calls made by a running process. It is useful for monitoring and diagnosing program behavior and interactions with shared libraries.">ltrace</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="strace" data-category="reversing" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Strace is a diagnostic tool for monitoring and taming interactions between user-space processes and the Linux kernel, including system calls, signals, and process state changes.">strace</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pyinstxtractor" data-category="reversing" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="pyinstxtractor is a Python script for extracting the contents of PyInstaller-generated executables. It helps in analyzing and understanding the structure of packed Python applications.">pyinstxtractor</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="dnspy" data-category="reversing" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="dnSpy is a debugger and .NET assembly editor. It is used for decompiling, debugging, and modifying .NET applications, aiding in reverse engineering and security analysis.">dnspy</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="angr" data-category="reversing" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="angr is a binary analysis framework for analyzing and exploring binary executables. It provides tools for static and dynamic analysis, symbolic execution, and vulnerability discovery.">angr</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingRuby">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseRuby" aria-expanded="false"
+aria-controls="flush-collapseRuby">
+Ruby&nbsp;<span class="badge badge-light bg-light text-dark"><span id="ruby-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseRuby" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingRuby">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('ruby')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('ruby')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ronin-vulns" data-category="ruby" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ronin-Vulns is a vulnerability scanning tool that integrates various scanning techniques to identify security weaknesses in web applications and infrastructure.">ronin-vulns</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingSap">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseSap" aria-expanded="false"
+aria-controls="flush-collapseSap">
+Sap&nbsp;<span class="badge badge-light bg-light text-dark"><span id="sap-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseSap" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingSap">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('sap')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('sap')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sncscan" data-category="sap" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sncscan is a tool used for scanning network configurations and identifying security issues. It helps in detecting misconfigurations and potential vulnerabilities in network setups.">sncscan</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingScanners">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseScanners" aria-expanded="false"
+aria-controls="flush-collapseScanners">
+Scanners&nbsp;<span class="badge badge-light bg-light text-dark"><span id="scanners-counter">0</span>/8</span>
+</button>
+</h2>
+<div id="flush-collapseScanners" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingScanners">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('scanners')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('scanners')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="finalrecon" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="FinalRecon is a reconnaissance tool designed for web application pentesting. It gathers information about target domains, subdomains, IP addresses, and more, aiding in the initial phase of security assessments.">finalrecon</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="whatweb" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="WhatWeb is a tool used to identify websites' technologies, including content management systems (CMS), web servers, and frameworks. It helps in gathering information about the underlying technologies used by a website.">whatweb</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="rustscan" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="RustScan is a modern, fast port scanner written in Rust. It leverages the performance and safety features of Rust to provide efficient and reliable scanning of open ports on network hosts.">rustscan</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gittools" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GitTools is a collection of tools for extracting information from Git repositories. It helps in discovering sensitive data, exposed credentials, and other security-relevant information in Git repositories.">gittools</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ssrfmap" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SSRFmap is a tool designed to find and exploit Server-Side Request Forgery (SSRF) vulnerabilities. It automates the detection and exploitation process, allowing for efficient testing of web applications for SSRF issues.">ssrfmap</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="subbrute" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Subbrute is a DNS subdomain brute-forcing tool. It helps in discovering subdomains of a given domain by performing brute-force attacks using a wordlist of common subdomain names.">subbrute</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="smbmap" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SMBMap is a tool for enumerating and manipulating SMB (Server Message Block) shares on Windows networks. It provides functionalities for listing shares, downloading/uploading files, and executing commands on remote hosts.">smbmap</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="nuclei" data-category="scanners" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Nuclei is a fast, customizable vulnerability scanner based on templates. It allows users to perform targeted scans for various vulnerabilities and attack vectors using a vast collection of community-powered templates. It supports scanning web applications, infrastructure, APIs, and more, and can be integrated into CI/CD pipelines for automated security testing.">nuclei</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingShell">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseShell" aria-expanded="false"
+aria-controls="flush-collapseShell">
+Shell&nbsp;<span class="badge badge-light bg-light text-dark"><span id="shell-counter">0</span>/3</span>
+</button>
+</h2>
+<div id="flush-collapseShell" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingShell">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('shell')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('shell')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="vortex-php-webshell" data-category="shell" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Vortex-Php-WebShell is a simple PHP web shell that provides remote access to a web server. It allows attackers to execute commands, browse files, and perform other actions on compromised web servers.">vortex-php-webshell</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pwncat" data-category="shell" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="pwncat is a post-exploitation framework for Unix-based systems. It provides a range of tools and features for maintaining access and executing commands on compromised hosts.">pwncat</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="powercat" data-category="shell" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PowerCat is a PowerShell tool that functions like Netcat, providing networking capabilities for Windows. It supports various network operations including port listening, reverse shells, and file transfers.">powercat</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingSpoofing">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseSpoofing" aria-expanded="false"
+aria-controls="flush-collapseSpoofing">
+Spoofing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="spoofing-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseSpoofing" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingSpoofing">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('spoofing')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('spoofing')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="spoofcheck" data-category="spoofing" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SpoofCheck is a tool for checking email spoofing vulnerabilities. It examines SPF, DKIM, and DMARC configurations to determine if a domain is protected against email spoofing attacks.">spoofcheck</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingSsti">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseSsti" aria-expanded="false"
+aria-controls="flush-collapseSsti">
+Ssti&nbsp;<span class="badge badge-light bg-light text-dark"><span id="ssti-counter">0</span>/3</span>
+</button>
+</h2>
+<div id="flush-collapseSsti" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingSsti">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('ssti')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('ssti')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="tplmap-ssti-" data-category="ssti" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TPLMap-SSTI is a tool for detecting and exploiting server-side template injection (SSTI) vulnerabilities. It automates the process of finding and leveraging SSTI issues to execute arbitrary code on the server.">tplmap-ssti-</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sstimap" data-category="ssti" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SSTIMap is a tool used to scan for server-side template injection (SSTI) vulnerabilities in web applications. It helps in identifying and exploiting SSTI issues to perform code injection attacks.">sstimap</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="tplmap" data-category="ssti" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TPLMap is a tool that helps in detecting and exploiting server-side template injection (SSTI) vulnerabilities. It supports various template engines and provides functionalities for executing arbitrary code on vulnerable servers.">tplmap</button>
 </div>
 </div>
 </div>
@@ -320,14 +562,35 @@ Pip3&nbsp;<span class="badge badge-light bg-light text-dark"><span id="pip3-coun
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseStego" aria-expanded="false"
 aria-controls="flush-collapseStego">
-Stego&nbsp;<span class="badge badge-light bg-light text-dark"><span id="stego-counter">0</span>/1</span>
+Stego&nbsp;<span class="badge badge-light bg-light text-dark"><span id="stego-counter">0</span>/4</span>
 </button>
 </h2>
 <div id="flush-collapseStego" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingStego">
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('stego')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('stego')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="stegsolver" data-category="stego" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="StegSolver is a tool for analyzing images for hidden data using multiple steganography techniques. It helps in identifying and extracting concealed information from images.">stegsolver</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="steghide" data-category="stego" data-installation="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Steghide is a steganography tool that hides data in various kinds of image and audio files. It supports encryption of embedded data and can extract the hidden information when provided with the correct passphrase.">steghide</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="zsteg" data-category="stego" data-installation="gem" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="zsteg is a tool used for detecting hidden data in PNG and BMP files. It identifies steganographic content and other hidden information that might be embedded within images.">zsteg</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="stegoveritas" data-category="stego" data-installation="pip3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="StegoVeritas is a steganography analysis tool designed to detect and extract hidden information in images. It supports various steganographic techniques and aids in uncovering concealed data.">stegoveritas</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="stegsolver" data-category="stego" data-installation="wget" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="StegSolver is a tool for analyzing images for hidden data using multiple steganography techniques. It helps in identifying and extracting concealed information from images.">stegsolver</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingTlsssl">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseTlsssl" aria-expanded="false"
+aria-controls="flush-collapseTlsssl">
+Tlsssl&nbsp;<span class="badge badge-light bg-light text-dark"><span id="tlsssl-counter">0</span>/2</span>
+</button>
+</h2>
+<div id="flush-collapseTlsssl" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingTlsssl">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('tlsssl')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('tlsssl')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sslstrip" data-category="tlsssl" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SSLStrip is a tool used for performing man-in-the-middle attacks by stripping SSL/TLS encryption from HTTPS traffic. It allows attackers to intercept and manipulate unencrypted data sent between clients and servers.">sslstrip</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="tls-attacker" data-category="tlsssl" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TLS-Attacker is a framework for analyzing and testing the security of TLS (Transport Layer Security) implementations. It provides tools for performing various TLS attacks and evaluating the robustness of TLS deployments.">tls-attacker</button>
 </div>
 </div>
 </div>
@@ -344,352 +607,25 @@ Tunneling&nbsp;<span class="badge badge-light bg-light text-dark"><span id="tunn
 <div class="accordion-body">
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('tunneling')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('tunneling')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="chisel" data-category="tunneling" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Chisel is a fast TCP/UDP tunnel, transported over HTTP, secured via SSH. It is useful for establishing network tunnels and bypassing firewalls.">chisel</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ptunnel-ng" data-category="tunneling" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ptunnel-NG is a network tunneling tool that tunnels TCP connections over ICMP packets. It allows for bypassing firewalls and network restrictions by using ICMP echo requests and replies.">ptunnel-ng</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="chisel" data-category="tunneling" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Chisel is a fast TCP/UDP tunnel, transported over HTTP, secured via SSH. It is useful for establishing network tunnels and bypassing firewalls.">chisel</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ptunnel-ng" data-category="tunneling" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ptunnel-NG is a network tunneling tool that tunnels TCP connections over ICMP packets. It allows for bypassing firewalls and network restrictions by using ICMP echo requests and replies.">ptunnel-ng</button>
 </div>
 </div>
 </div>
 
 <div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingPe-privesc">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingUnicode">
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapsePe-privesc" aria-expanded="false"
-aria-controls="flush-collapsePe-privesc">
-Pe-privesc&nbsp;<span class="badge badge-light bg-light text-dark"><span id="pe-privesc-counter">0</span>/1</span>
+data-bs-toggle="collapse" data-bs-target="#flush-collapseUnicode" aria-expanded="false"
+aria-controls="flush-collapseUnicode">
+Unicode&nbsp;<span class="badge badge-light bg-light text-dark"><span id="unicode-counter">0</span>/1</span>
 </button>
 </h2>
-<div id="flush-collapsePe-privesc" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPe-privesc">
+<div id="flush-collapseUnicode" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingUnicode">
 <div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('pe-privesc')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('pe-privesc')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="peass-ng" data-category="pe-privesc" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PEASS-ng (Privilege Escalation Awesome Scripts SUITE) is a collection of scripts for finding local privilege escalation vulnerabilities on Unix and Windows systems.">peass-ng</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingPe-shell">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapsePe-shell" aria-expanded="false"
-aria-controls="flush-collapsePe-shell">
-Pe-shell&nbsp;<span class="badge badge-light bg-light text-dark"><span id="pe-shell-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapsePe-shell" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPe-shell">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('pe-shell')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('pe-shell')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pwncat" data-category="pe-shell" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="pwncat is a post-exploitation framework for Unix-based systems. It provides a range of tools and features for maintaining access and executing commands on compromised hosts.">pwncat</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingPe-windows">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapsePe-windows" aria-expanded="false"
-aria-controls="flush-collapsePe-windows">
-Pe-windows&nbsp;<span class="badge badge-light bg-light text-dark"><span id="pe-windows-counter">0</span>/3</span>
-</button>
-</h2>
-<div id="flush-collapsePe-windows" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingPe-windows">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('pe-windows')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('pe-windows')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="mimikatz" data-category="pe-windows" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Mimikatz is a powerful post-exploitation tool for Windows that extracts plaintext passwords, hashes, PINs, and Kerberos tickets from memory. It is widely used for credential dumping and lateral movement.">mimikatz</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="fullpowers" data-category="pe-windows" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="FullPowers is a tool for obtaining full administrative privileges on Windows systems. It exploits misconfigurations and vulnerabilities to elevate user privileges.">fullpowers</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="powercat" data-category="pe-windows" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="PowerCat is a PowerShell tool that functions like Netcat, providing networking capabilities for Windows. It supports various network operations including port listening, reverse shells, and file transfers.">powercat</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingReversing-binary">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing-binary" aria-expanded="false"
-aria-controls="flush-collapseReversing-binary">
-Reversing-binary&nbsp;<span class="badge badge-light bg-light text-dark"><span id="reversing-binary-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseReversing-binary" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingReversing-binary">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('reversing-binary')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('reversing-binary')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="angr" data-category="reversing-binary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="angr is a binary analysis framework for analyzing and exploring binary executables. It provides tools for static and dynamic analysis, symbolic execution, and vulnerability discovery.">angr</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingReversing-windows">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing-windows" aria-expanded="false"
-aria-controls="flush-collapseReversing-windows">
-Reversing-windows&nbsp;<span class="badge badge-light bg-light text-dark"><span id="reversing-windows-counter">0</span>/2</span>
-</button>
-</h2>
-<div id="flush-collapseReversing-windows" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingReversing-windows">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('reversing-windows')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('reversing-windows')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="pyinstxtractor" data-category="reversing-windows" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="pyinstxtractor is a Python script for extracting the contents of PyInstaller-generated executables. It helps in analyzing and understanding the structure of packed Python applications.">pyinstxtractor</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="dnspy" data-category="reversing-windows" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="dnSpy is a debugger and .NET assembly editor. It is used for decompiling, debugging, and modifying .NET applications, aiding in reverse engineering and security analysis.">dnspy</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingSpoofing-mitm">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseSpoofing-mitm" aria-expanded="false"
-aria-controls="flush-collapseSpoofing-mitm">
-Spoofing-mitm&nbsp;<span class="badge badge-light bg-light text-dark"><span id="spoofing-mitm-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseSpoofing-mitm" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingSpoofing-mitm">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('spoofing-mitm')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('spoofing-mitm')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="responder" data-category="spoofing-mitm" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Responder is a tool for LLMNR, NBT-NS, and MDNS poisoning. It is used to capture network credentials by exploiting weaknesses in name resolution protocols on local networks.">responder</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-amazon">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-amazon" aria-expanded="false"
-aria-controls="flush-collapseWeb-amazon">
-Web-amazon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-amazon-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-amazon" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-amazon">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-amazon')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-amazon')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="nimbostratus" data-category="web-amazon" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Nimbostratus is a toolkit for testing AWS security. It helps in identifying and exploiting misconfigurations and vulnerabilities in Amazon Web Services environments.">nimbostratus</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-attacks">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-attacks" aria-expanded="false"
-aria-controls="flush-collapseWeb-attacks">
-Web-attacks&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-attacks-counter">0</span>/6</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-attacks" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-attacks">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-attacks')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-attacks')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="commix" data-category="web-attacks" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Commix (Command Injection Exploiter) is a tool for testing web applications for command injection vulnerabilities. It automates the detection and exploitation of these security issues.">commix</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="mongomap" data-category="web-attacks" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="MongoMap is a tool for mapping and analyzing MongoDB instances. It helps in identifying misconfigurations and potential security vulnerabilities in MongoDB deployments.">mongomap</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="xsstrike" data-category="web-attacks" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="XSStrike is an advanced XSS (Cross-Site Scripting) detection suite. It provides tools for finding and exploiting XSS vulnerabilities in web applications.">xsstrike</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="crackql" data-category="web-attacks" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="CrackQL is a tool for testing SQL injection vulnerabilities. It automates the process of detecting and exploiting SQL injection flaws in web applications.">crackql</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="STEWS" data-category="web-attacks" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="STEWS (Structured Threat Emulation and Web Simulation) is a framework for simulating web attacks and testing the security of web applications. It provides tools for creating and executing attack scenarios.">STEWS</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="nuclei" data-category="web-attacks" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Nuclei is a fast, customizable vulnerability scanner based on templates. It allows users to perform targeted scans for various vulnerabilities and attack vectors using a vast collection of community-powered templates. It supports scanning web applications, infrastructure, APIs, and more, and can be integrated into CI/CD pipelines for automated security testing.">nuclei</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-cookies">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-cookies" aria-expanded="false"
-aria-controls="flush-collapseWeb-cookies">
-Web-cookies&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-cookies-counter">0</span>/3</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-cookies" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-cookies">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-cookies')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-cookies')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="jwt_tool" data-category="web-cookies" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="JWT Tool is a toolkit for testing JSON Web Tokens (JWTs). It includes functionality for cracking, forging, and manipulating JWTs. It is useful for security researchers and penetration testers to analyze the security of JWT implementations.">jwt_tool</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="jwt-key-recovery" data-category="web-cookies" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="JWT-Key-Recovery is a tool used to recover the secret key used to sign JSON Web Tokens (JWTs). It employs brute force or dictionary attacks to identify the key, which can then be used to forge JWTs or analyze their security.">jwt-key-recovery</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="c-jwt-cracker" data-category="web-cookies" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="C-JWT-Cracker is a tool designed to brute force crack JSON Web Tokens (JWTs). It attempts to find the secret key used to sign the JWT by testing multiple possible values, aiding in the security analysis of JWT implementations.">c-jwt-cracker</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-crawler">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-crawler" aria-expanded="false"
-aria-controls="flush-collapseWeb-crawler">
-Web-crawler&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-crawler-counter">0</span>/2</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-crawler" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-crawler">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-crawler')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-crawler')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="webgrep" data-category="web-crawler" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Webgrep is a tool used for searching and extracting data from web pages. It helps automate the process of retrieving specific information from websites based on patterns or keywords.">webgrep</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="katana" data-category="web-crawler" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Katana is a next-generation crawler designed for modern web applications. It can parse and interact with JavaScript-heavy sites, allowing it to discover more endpoints and parameters than traditional crawlers.">katana</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-dns">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-dns" aria-expanded="false"
-aria-controls="flush-collapseWeb-dns">
-Web-dns&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-dns-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-dns" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-dns">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-dns')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-dns')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="Gotator" data-category="web-dns" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Gotator is a tool used for rotating and combining wordlists for use in various security testing tasks. It helps in creating comprehensive wordlists by generating permutations and combinations of input data.">Gotator</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-recon">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-recon" aria-expanded="false"
-aria-controls="flush-collapseWeb-recon">
-Web-recon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-recon-counter">0</span>/2</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-recon" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-recon">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-recon')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-recon')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="aquatone" data-category="web-recon" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Aquatone is a tool for visual inspection of websites across a large number of hosts. It provides a convenient way to gather screenshots and identify interesting or vulnerable web applications.">aquatone</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="amass" data-category="web-recon" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Amass is an advanced open-source tool for network mapping and attack surface discovery. It helps in performing DNS enumeration, subdomain discovery, and infrastructure mapping for identifying potential entry points.">amass</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-ruby">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-ruby" aria-expanded="false"
-aria-controls="flush-collapseWeb-ruby">
-Web-ruby&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-ruby-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-ruby" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-ruby">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-ruby')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-ruby')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ronin-vulns" data-category="web-ruby" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Ronin-Vulns is a vulnerability scanning tool that integrates various scanning techniques to identify security weaknesses in web applications and infrastructure.">ronin-vulns</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-sap">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-sap" aria-expanded="false"
-aria-controls="flush-collapseWeb-sap">
-Web-sap&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-sap-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-sap" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-sap">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-sap')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-sap')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sncscan" data-category="web-sap" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Sncscan is a tool used for scanning network configurations and identifying security issues. It helps in detecting misconfigurations and potential vulnerabilities in network setups.">sncscan</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-scanners">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-scanners" aria-expanded="false"
-aria-controls="flush-collapseWeb-scanners">
-Web-scanners&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-scanners-counter">0</span>/7</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-scanners" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-scanners">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-scanners')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-scanners')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="finalrecon" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="FinalRecon is a reconnaissance tool designed for web application pentesting. It gathers information about target domains, subdomains, IP addresses, and more, aiding in the initial phase of security assessments.">finalrecon</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="whatweb" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="WhatWeb is a tool used to identify websites' technologies, including content management systems (CMS), web servers, and frameworks. It helps in gathering information about the underlying technologies used by a website.">whatweb</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="rustscan" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="RustScan is a modern, fast port scanner written in Rust. It leverages the performance and safety features of Rust to provide efficient and reliable scanning of open ports on network hosts.">rustscan</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="gittools" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="GitTools is a collection of tools for extracting information from Git repositories. It helps in discovering sensitive data, exposed credentials, and other security-relevant information in Git repositories.">gittools</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="ssrfmap" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SSRFmap is a tool designed to find and exploit Server-Side Request Forgery (SSRF) vulnerabilities. It automates the detection and exploitation process, allowing for efficient testing of web applications for SSRF issues.">ssrfmap</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="subbrute" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Subbrute is a DNS subdomain brute-forcing tool. It helps in discovering subdomains of a given domain by performing brute-force attacks using a wordlist of common subdomain names.">subbrute</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="smbmap" data-category="web-scanners" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SMBMap is a tool for enumerating and manipulating SMB (Server Message Block) shares on Windows networks. It provides functionalities for listing shares, downloading/uploading files, and executing commands on remote hosts.">smbmap</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-shell">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-shell" aria-expanded="false"
-aria-controls="flush-collapseWeb-shell">
-Web-shell&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-shell-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-shell" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-shell">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-shell')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-shell')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="vortex-php-webshell" data-category="web-shell" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Vortex-Php-WebShell is a simple PHP web shell that provides remote access to a web server. It allows attackers to execute commands, browse files, and perform other actions on compromised web servers.">vortex-php-webshell</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-ssti">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-ssti" aria-expanded="false"
-aria-controls="flush-collapseWeb-ssti">
-Web-ssti&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-ssti-counter">0</span>/3</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-ssti" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-ssti">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-ssti')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-ssti')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="tplmap-ssti-" data-category="web-ssti" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TPLMap-SSTI is a tool for detecting and exploiting server-side template injection (SSTI) vulnerabilities. It automates the process of finding and leveraging SSTI issues to execute arbitrary code on the server.">tplmap-ssti-</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sstimap" data-category="web-ssti" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SSTIMap is a tool used to scan for server-side template injection (SSTI) vulnerabilities in web applications. It helps in identifying and exploiting SSTI issues to perform code injection attacks.">sstimap</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="tplmap" data-category="web-ssti" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TPLMap is a tool that helps in detecting and exploiting server-side template injection (SSTI) vulnerabilities. It supports various template engines and provides functionalities for executing arbitrary code on vulnerable servers.">tplmap</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-tlsssl">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-tlsssl" aria-expanded="false"
-aria-controls="flush-collapseWeb-tlsssl">
-Web-tlsssl&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-tlsssl-counter">0</span>/2</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-tlsssl" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-tlsssl">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-tlsssl')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-tlsssl')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="sslstrip" data-category="web-tlsssl" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SSLStrip is a tool used for performing man-in-the-middle attacks by stripping SSL/TLS encryption from HTTPS traffic. It allows attackers to intercept and manipulate unencrypted data sent between clients and servers.">sslstrip</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="tls-attacker" data-category="web-tlsssl" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TLS-Attacker is a framework for analyzing and testing the security of TLS (Transport Layer Security) implementations. It provides tools for performing various TLS attacks and evaluating the robustness of TLS deployments.">tls-attacker</button>
-</div>
-</div>
-</div>
-
-<div class="accordion-item bg-dark text-white">
-<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb-unicode">
-<button class="accordion-button collapsed bg-dark text-white border" type="button"
-data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb-unicode" aria-expanded="false"
-aria-controls="flush-collapseWeb-unicode">
-Web-unicode&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-unicode-counter">0</span>/1</span>
-</button>
-</h2>
-<div id="flush-collapseWeb-unicode" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb-unicode">
-<div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web-unicode')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web-unicode')">None</button>
-<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="unisec" data-category="web-unicode" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="UniSec is a unified security testing framework that integrates multiple security testing tools and techniques. It provides a comprehensive platform for performing security assessments across different domains and technologies.">unisec</button>
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('unicode')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('unicode')">None</button>
+<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="unisec" data-category="unicode" data-installation="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="UniSec is a unified security testing framework that integrates multiple security testing tools and techniques. It provides a comprehensive platform for performing security assessments across different domains and technologies.">unisec</button>
 </div>
 </div>
 </div>

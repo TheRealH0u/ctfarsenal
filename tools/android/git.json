@@ -1,0 +1,3 @@
+{
+    "slicer": "git -C $TPATH clone https://github.com/mzfr/slicer.git"
+}

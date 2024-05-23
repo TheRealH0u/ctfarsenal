@@ -120,46 +120,50 @@ accordion_end = """</div>
 
 accordion_data = ""
 
-accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
+accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
 
 new_html = ""
 
+def getNumberOfTools(path):
+    files = traverse_directory(path).values()
+    length = 0
+    for values in files:
+        for file in values:
+            data = read_json_file(f"{path}/{file}")
+            length += len(data)
+    return length
+
 if __name__ == "__main__":
     descriptions = read_json_file("descriptions.json")
-    with open("../index.html", "w") as f:
-        f.write(html_start)
-        root_directory = "../tools"
-        structure = traverse_directory(root_directory)
-        for dirpath, files in structure.items():
+    root_directory = "../tools"
+    structure = traverse_directory(root_directory)
+    for dirpath, files in structure.items():
+        if len(files) > 0:
+            ACCORDION_CATEGORY = dirpath
+            ACCORDION_NAME = ACCORDION_CATEGORY.capitalize()
+            NUMBER_OF_TOOLS = getNumberOfTools(f"{root_directory}/{dirpath}")
+            output = accordion_start.format(
+                ACCORDION_NAME=ACCORDION_NAME,
+                ACCORDION_CATEGORY=ACCORDION_CATEGORY,
+                NUMBER_OF_TOOLS=NUMBER_OF_TOOLS,
+            )
             for file in files:
+                INSTALLATION_METHOD = file.split(".")[0]
                 path = "/".join([root_directory, dirpath, file])
                 data = read_json_file(path)
-                ACCORDION_CATEGORY = (
-                    file.split(".json")[0]
-                    if dirpath == "."
-                    else "-".join([dirpath, file.split(".json")[0]])
-                )
-                ACCORDION_NAME = ACCORDION_CATEGORY.capitalize()
-                NUMBER_OF_TOOLS = len(data)
-                output = accordion_start.format(
-                    ACCORDION_NAME=ACCORDION_NAME,
-                    ACCORDION_CATEGORY=ACCORDION_CATEGORY,
-                    NUMBER_OF_TOOLS=NUMBER_OF_TOOLS,
-                )
-
                 for TOOL_NAME in data.keys():
                     if re.search(r"\b{}\b".format(re.escape(TOOL_NAME)), new_html):
                         print(f"{TOOL_NAME} already in document {file}")
-                        input()
                     TOOL_DESCRIPTION = descriptions[TOOL_NAME]
                     output += (
                         accordion_button.format(
-                            TOOL_NAME=TOOL_NAME, ACCORDION_CATEGORY=ACCORDION_CATEGORY, TOOL_DESCRIPTION=TOOL_DESCRIPTION
+                            TOOL_NAME=TOOL_NAME, ACCORDION_CATEGORY=ACCORDION_CATEGORY, TOOL_DESCRIPTION=TOOL_DESCRIPTION, INSTALLATION_METHOD=INSTALLATION_METHOD
                         )
                         + "\n"
                     )
-
-                output += accordion_end
-                new_html += output
-        new_html += html_end
+            output += accordion_end
+            new_html += output
+    new_html += html_end
+    with open("../index.html", "w") as f:
+        f.write(html_start)
         f.write(new_html)

@@ -5,5 +5,6 @@
     "gittools": "git -C $TPATH clone https://github.com/internetwache/GitTools.git",
     "ssrfmap": "git -C $TPATH clone https://github.com/swisskyrepo/SSRFmap.git",
     "subbrute": "git -C $TPATH clone https://github.com/TheRook/subbrute.git",
-    "smbmap": "git -C $TPATH clone https://github.com/ShawnDEvans/smbmap.git"
+    "smbmap": "git -C $TPATH clone https://github.com/ShawnDEvans/smbmap.git",
+    "nuclei": "git -C $TPATH clone https://github.com/projectdiscovery/nuclei.git"
 }

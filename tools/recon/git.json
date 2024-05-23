@@ -1,4 +1,4 @@
 {
     "aquatone": "git -C $TPATH clone https://github.com/michenriksen/aquatone.git",
-    "amass": "git _C $TPATH clone https://github.com/owasp-amass/amass.git"
+    "amass": "git -C $TPATH clone https://github.com/owasp-amass/amass.git"
 }
