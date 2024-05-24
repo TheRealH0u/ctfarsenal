@@ -5,3 +5,7 @@ body{
     margin: 0px !important;
     margin-bottom: 0px !important;
 }
+
+.popover-title{
+    background: #ffff99;
+}

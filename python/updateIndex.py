@@ -120,7 +120,7 @@ accordion_end = """</div>
 
 accordion_data = ""
 
-accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
+accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-title="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
 
 new_html = ""
 

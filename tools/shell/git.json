@@ -1,5 +1,6 @@
 {
     "vortex-php-webshell": "git -C $TPATH clone https://github.com/bear102/Vortex-php-webshell.git",
     "pwncat": "git -C $TPATH clone https://github.com/calebstewart/pwncat.git",
-    "powercat":"git -C $TPATH clone https://github.com/besimorhino/powercat.git"
+    "powercat":"git -C $TPATH clone https://github.com/besimorhino/powercat.git",
+    "hoaxshell":"git -C $TPATH clone https://github.com/t3l3machus/hoaxshell.git"
 }

@@ -121,5 +121,6 @@
     "tplmap": "TPLMap is a tool that helps in detecting and exploiting server-side template injection (SSTI) vulnerabilities. It supports various template engines and provides functionalities for executing arbitrary code on vulnerable servers.",
     "sslstrip": "SSLStrip is a tool used for performing man-in-the-middle attacks by stripping SSL/TLS encryption from HTTPS traffic. It allows attackers to intercept and manipulate unencrypted data sent between clients and servers.",
     "tls-attacker": "TLS-Attacker is a framework for analyzing and testing the security of TLS (Transport Layer Security) implementations. It provides tools for performing various TLS attacks and evaluating the robustness of TLS deployments.",
-    "unisec": "UniSec is a unified security testing framework that integrates multiple security testing tools and techniques. It provides a comprehensive platform for performing security assessments across different domains and technologies."
+    "unisec": "UniSec is a unified security testing framework that integrates multiple security testing tools and techniques. It provides a comprehensive platform for performing security assessments across different domains and technologies.",
+    "hoaxshell": "hoaxshell is a Windows reverse shell payload generator and handler that abuses the http(s) protocol to establish a beacon-like reverse shell."
 }
