@@ -59,6 +59,7 @@ html_end = """</div>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/buttonPress.js"></script>
+<script src="js/search.js"></script>
 <script src="js/popovers.js"></script>
 </body>
 
@@ -120,7 +121,7 @@ accordion_end = """</div>
 
 accordion_data = ""
 
-accordion_button = """<button class="btn btn-dark border-white m-1" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-title="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
+accordion_button = """<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-title="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
 
 new_html = ""
 
