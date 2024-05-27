@@ -41,11 +41,6 @@ $("#tools-search").on("input", function(){
             }else{
                 $(this).show();
             }
-            // if ($toolClasses.filter(function() { console.log($(this)); return $(this).css('display') === 'none'; }).length === 0) {
-            //     $(this).show();
-            // } else {
-            //     $(this).hide();
-            // }
         });
     }else{
         $(".accordion-item").each(function(){
