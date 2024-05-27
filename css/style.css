@@ -1,11 +1,17 @@
 body{
-    /* font-family: Arial, Helvetica, sans-serif !important; */
+    min-height: 100vh;
 }
 #script-output div p{
     margin: 0px !important;
     margin-bottom: 0px !important;
 }
 
-.popover-title{
-    background: #ffff99;
+.popover-header{
+    background: #212529;
+    border: 1px solid white;
+}
+.popover-body{
+    background: #212529;
+    border: 1px solid white;
+    color: white;
 }
