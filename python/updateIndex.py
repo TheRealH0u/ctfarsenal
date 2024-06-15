@@ -8,32 +8,38 @@ html_start = """<!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CTF Arsenal</title>
-<link rel="stylesheet" href="css/prism.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTF Arsenal</title>
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-dark text-light">
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body">
-<div class="container-fluid">
-<span class="navbar-brand">
-<div class="vr">&nbsp;</div>
-CTF Arsenal
-<div class="vr">&nbsp;</div>
-</span>
-</div>
-</nav>
-</div>
-<div class="container mt-5">
-<div class="row">
-<div class="col-md-6 left-side border">
-<div class="container p-4">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body">
+      <div class="container-fluid">
+        <span class="navbar-brand">
+          <div class="vr">&nbsp;</div>
+          CTF Arsenal
+          <div class="vr">&nbsp;</div>
+        </span>
+      </div>
+    </nav>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 left-side border">
+        <div class="container p-4">
+          <div class="input-group mb-3">
+            <input id="tools-search" type="text" class="form-control" placeholder="Search tools description..." aria-label="Search tools description..."
+              aria-describedby="basic-addon1">
+          </div>
 <div class="accordion accordion-flush" id="accordionFlush">
 """
+
+
 
 html_end = """</div>
 </div>
