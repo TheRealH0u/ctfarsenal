@@ -1,0 +1,3 @@
+{
+    "BrowserBruter":"git -C $TPATH clone https://github.com/netsquare/BrowserBruter.git"
+}

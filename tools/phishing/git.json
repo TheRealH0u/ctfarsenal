@@ -1,0 +1,4 @@
+{
+    "evilgophish":"git -C $TPATH clone https://github.com/fin3ss3g0d/evilgophish.git",
+    "website-cloner":"git -C $TPATH clone https://github.com/ZKAW/website-cloner.git"
+}

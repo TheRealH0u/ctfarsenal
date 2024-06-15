@@ -1,4 +1,6 @@
 {
     "ysoserialdotnet": "git -C $TPATH clone https://github.com/pwntester/ysoserial.net.git",
-    "IIS-ShortName-Scanner": "git -C $TPATH clone https://github.com/irsdl/IIS-ShortName-Scanner.git"
+    "IIS-ShortName-Scanner": "git -C $TPATH clone https://github.com/irsdl/IIS-ShortName-Scanner.git",
+    "MDE_Enum":"git -C $TPATH clone https://github.com/0xsp-SRD/MDE_Enum.git",
+    "ccmpwn":"git -C $TPATH clone https://github.com/mandiant/ccmpwn.git"
 }
