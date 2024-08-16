@@ -1,0 +1,3 @@
+{
+    "websocat":"git -C $TPATH clone https://github.com/vi/websocat.git"
+}

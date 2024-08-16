@@ -1,4 +1,7 @@
 {
     "aquatone": "git -C $TPATH clone https://github.com/michenriksen/aquatone.git",
-    "amass": "git -C $TPATH clone https://github.com/owasp-amass/amass.git"
+    "amass": "git -C $TPATH clone https://github.com/owasp-amass/amass.git",
+    "reconftw": "git -C $TPATH clone https://github.com/six2dez/reconftw.git",
+    "docker-reconftw":"git -C $TPATH clone https://github.com/mablanco/docker-reconftw.git",
+    "DockerSpy":"git -C $TPATH clone https://github.com/UndeadSec/DockerSpy.git"
 }

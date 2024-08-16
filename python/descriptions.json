@@ -131,5 +131,15 @@
     "ghauri":"An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws.",
     "BrowserBruter":"The Browser-Bruter is first ever browser based automated web pentesting tool for fuzzing web forms by controlling the browser it self. It automates the process of sending payloads to input fields of browser and sends them too server. It completely bypasses the need of breaking the encryption in order to fuzz and insert payloads in BurpSuite scanner and intruder.",
     "ccmpwn":"Lateral movement script that leverages the CcmExec service to remotely hijack user sessions.",
-    "grype":"A vulnerability scanner for container images and filesystems. Easily install the binary to try it out. Works with Syft, the powerful SBOM (software bill of materials) tool for container images and filesystems."
+    "grype":"A vulnerability scanner for container images and filesystems. Easily install the binary to try it out. Works with Syft, the powerful SBOM (software bill of materials) tool for container images and filesystems.",
+    "reconftw":"reconFTW automates the entire process of reconnaissance for you. It outperforms the work of subdomain enumeration along with various vulnerability checks and obtaining maximum information about your target.",
+    "docker-reconftw":"Docker image for reconftw, a simple script intended to perform a full recon on an objective with multiple subdomains",
+    "OneShot":"OneShot performs Pixie Dust attack without having to switch to monitor mode.",
+    "websocat":"Netcat, Curl and socat for Websocets",
+    "DalFox":"DalFox is a powerful open-source tool that focuses on automation, making it ideal for quickly scanning for XSS flaws and analyzing parameters. Its advanced testing engine and niche features are designed to streamline the process of detecting and verifying vulnerabilities.",
+    "hal":"HAL [/hel/] is a comprehensive netlist reverse engineering and manipulation framework.",
+    "ImHex":"A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.",
+    "DockerSpy":"DockerSpy searches for images on Docker Hub and extracts sensitive information such as authentication secrets, private keys, and more.",
+    "TTWAF":"TTWAF, or Test This WAF, is a Web Application Firewall (WAF) bypass testing tool. You can test a list of payloads like XSS, LFI, RCE, SQLI and find one that can bypass WAF. TTWAF is built in Rust, this is great for faster testing.",
+    "EOS":"EOS - Enemies of Symfony is a security tool used for Static Analysis. It identifies security issues in Symfony applications by analyzing the code for potential vulnerabilities."
 }

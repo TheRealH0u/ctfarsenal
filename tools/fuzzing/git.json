@@ -1,3 +1,5 @@
 {
-    "BrowserBruter":"git -C $TPATH clone https://github.com/netsquare/BrowserBruter.git"
+    "BrowserBruter":"git -C $TPATH clone https://github.com/netsquare/BrowserBruter.git",
+    "DalFox":"git -C $TPATH clone https://github.com/hahwul/dalfox.git",
+    "TTWAF": "git -C $TPATH clone https://github.com/AmoloHT/TTWAF.git"
 }

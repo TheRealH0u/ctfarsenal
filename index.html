@@ -234,7 +234,7 @@ Dns&nbsp;<span class="badge badge-light bg-light text-dark"><span id="dns-counte
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseForensics" aria-expanded="false"
 aria-controls="flush-collapseForensics">
-Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span id="forensics-counter">0</span>/11</span>
+Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span id="forensics-counter">0</span>/12</span>
 </button>
 </h2>
 <div id="flush-collapseForensics" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingForensics">
@@ -252,6 +252,7 @@ Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span id="fore
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="ics-forensics-tools" data-category="forensics" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ICS Forensics Tools are a collection of utilities designed for analyzing and investigating Industrial Control Systems (ICS). These tools help in understanding and securing critical infrastructure components.">ics-forensics-tools</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="speakeasy" data-category="forensics" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Speakeasy is a binary analysis framework for emulating Windows malware. It provides a sandbox-like environment for executing and analyzing malware behavior in a controlled setting.">speakeasy</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="dive" data-category="forensics" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Dive is a tool for exploring Docker images, allowing users to visualize and analyze their contents layer by layer. It helps in optimizing images and identifying unnecessary files.">dive</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="EOS" data-category="forensics" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="EOS - Enemies of Symfony is a security tool used for Static Analysis. It identifies security issues in Symfony applications by analyzing the code for potential vulnerabilities.">EOS</button>
 </div>
 </div>
 </div>
@@ -261,7 +262,7 @@ Forensics&nbsp;<span class="badge badge-light bg-light text-dark"><span id="fore
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseFuzzing" aria-expanded="false"
 aria-controls="flush-collapseFuzzing">
-Fuzzing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="fuzzing-counter">0</span>/1</span>
+Fuzzing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="fuzzing-counter">0</span>/3</span>
 </button>
 </h2>
 <div id="flush-collapseFuzzing" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingFuzzing">
@@ -269,6 +270,25 @@ Fuzzing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="fuzzin
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('fuzzing')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('fuzzing')">None</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="BrowserBruter" data-category="fuzzing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="The Browser-Bruter is first ever browser based automated web pentesting tool for fuzzing web forms by controlling the browser it self. It automates the process of sending payloads to input fields of browser and sends them too server. It completely bypasses the need of breaking the encryption in order to fuzz and insert payloads in BurpSuite scanner and intruder.">BrowserBruter</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="DalFox" data-category="fuzzing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="DalFox is a powerful open-source tool that focuses on automation, making it ideal for quickly scanning for XSS flaws and analyzing parameters. Its advanced testing engine and niche features are designed to streamline the process of detecting and verifying vulnerabilities.">DalFox</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="TTWAF" data-category="fuzzing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="TTWAF, or Test This WAF, is a Web Application Firewall (WAF) bypass testing tool. You can test a list of payloads like XSS, LFI, RCE, SQLI and find one that can bypass WAF. TTWAF is built in Rust, this is great for faster testing.">TTWAF</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingHardware">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseHardware" aria-expanded="false"
+aria-controls="flush-collapseHardware">
+Hardware&nbsp;<span class="badge badge-light bg-light text-dark"><span id="hardware-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseHardware" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingHardware">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('hardware')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('hardware')">None</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="hal" data-category="hardware" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="HAL [/hel/] is a comprehensive netlist reverse engineering and manipulation framework.">hal</button>
 </div>
 </div>
 </div>
@@ -468,7 +488,7 @@ Proxy&nbsp;<span class="badge badge-light bg-light text-dark"><span id="proxy-co
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseRecon" aria-expanded="false"
 aria-controls="flush-collapseRecon">
-Recon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="recon-counter">0</span>/2</span>
+Recon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="recon-counter">0</span>/5</span>
 </button>
 </h2>
 <div id="flush-collapseRecon" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingRecon">
@@ -477,6 +497,9 @@ Recon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="recon-co
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('recon')">None</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="aquatone" data-category="recon" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Aquatone is a tool for visual inspection of websites across a large number of hosts. It provides a convenient way to gather screenshots and identify interesting or vulnerable web applications.">aquatone</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="amass" data-category="recon" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Amass is an advanced open-source tool for network mapping and attack surface discovery. It helps in performing DNS enumeration, subdomain discovery, and infrastructure mapping for identifying potential entry points.">amass</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="reconftw" data-category="recon" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="reconFTW automates the entire process of reconnaissance for you. It outperforms the work of subdomain enumeration along with various vulnerability checks and obtaining maximum information about your target.">reconftw</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="docker-reconftw" data-category="recon" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Docker image for reconftw, a simple script intended to perform a full recon on an objective with multiple subdomains">docker-reconftw</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="DockerSpy" data-category="recon" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="DockerSpy searches for images on Docker Hub and extracts sensitive information such as authentication secrets, private keys, and more.">DockerSpy</button>
 </div>
 </div>
 </div>
@@ -486,7 +509,7 @@ Recon&nbsp;<span class="badge badge-light bg-light text-dark"><span id="recon-co
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing" aria-expanded="false"
 aria-controls="flush-collapseReversing">
-Reversing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="reversing-counter">0</span>/6</span>
+Reversing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="reversing-counter">0</span>/7</span>
 </button>
 </h2>
 <div id="flush-collapseReversing" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingReversing">
@@ -499,6 +522,7 @@ Reversing&nbsp;<span class="badge badge-light bg-light text-dark"><span id="reve
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="pyinstxtractor" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="pyinstxtractor is a Python script for extracting the contents of PyInstaller-generated executables. It helps in analyzing and understanding the structure of packed Python applications.">pyinstxtractor</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="dnspy" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="dnSpy is a debugger and .NET assembly editor. It is used for decompiling, debugging, and modifying .NET applications, aiding in reverse engineering and security analysis.">dnspy</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="angr" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="angr is a binary analysis framework for analyzing and exploring binary executables. It provides tools for static and dynamic analysis, symbolic execution, and vulnerability discovery.">angr</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="ImHex" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.">ImHex</button>
 </div>
 </div>
 </div>
@@ -704,6 +728,40 @@ Unicode&nbsp;<span class="badge badge-light bg-light text-dark"><span id="unicod
 <button class="btn btn-success border-white m-1" type="button" onclick="allTools('unicode')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('unicode')">None</button>
 <button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="unisec" data-category="unicode" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="UniSec is a unified security testing framework that integrates multiple security testing tools and techniques. It provides a comprehensive platform for performing security assessments across different domains and technologies.">unisec</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingWeb">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseWeb" aria-expanded="false"
+aria-controls="flush-collapseWeb">
+Web&nbsp;<span class="badge badge-light bg-light text-dark"><span id="web-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseWeb" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWeb">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('web')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('web')">None</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="websocat" data-category="web" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Netcat, Curl and socat for Websocets">websocat</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingWireless">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseWireless" aria-expanded="false"
+aria-controls="flush-collapseWireless">
+Wireless&nbsp;<span class="badge badge-light bg-light text-dark"><span id="wireless-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseWireless" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-headingWireless">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button" onclick="allTools('wireless')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('wireless')">None</button>
+<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="OneShot" data-category="wireless" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="OneShot performs Pixie Dust attack without having to switch to monitor mode.">OneShot</button>
 </div>
 </div>
 </div>

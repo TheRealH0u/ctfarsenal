@@ -1,0 +1,3 @@
+{
+    "OneShot":"git -C $TPATH clone https://github.com/kimocoder/OneShot.git"
+}

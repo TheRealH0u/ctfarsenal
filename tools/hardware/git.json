@@ -1,0 +1,3 @@
+{
+    "hal":"git -C $TPATH clone https://github.com/emsec/hal.git"
+}

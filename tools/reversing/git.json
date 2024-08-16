@@ -1,5 +1,6 @@
 {
     "pyinstxtractor": "git -C $TPATH clone https://github.com/extremecoders-re/pyinstxtractor.git",
     "dnspy": "git -C $TPATH clone https://github.com/dnSpy/dnSpy.git",
-    "angr": "git -C $TPATH clone https://github.com/angr/angr.git"
+    "angr": "git -C $TPATH clone https://github.com/angr/angr.git",
+    "ImHex":"git -C $TPATH clone https://github.com/WerWolv/ImHex.git"
 }
