@@ -157,7 +157,7 @@ function noneTools(category) {
     //console.log(buttons);
     for (let i = 0; i < buttons.length; i++) {
         //console.log(buttons[i]);
-        if (buttons[i].classList.contains('btn-light')) {
+        if (buttons[i].classList.contains('btn-custom-light')) {
             buttonPress(buttons[i]);
         }
     }
