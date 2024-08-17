@@ -41,9 +41,9 @@ html_start = """<!DOCTYPE html>
   </div>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6 left-side border">
+      <div class="col-lg-6 col-12 left-side border">
         <div class="container p-4">
-          <div class="container mb-3">
+          <div class="container container-black mb-3 p-4 d-flex justify-content-between">
             <button onclick="filterRemove()" class="btn badge none-badge">None</button>
             <button onclick="filterTools(this, 'git')" class="btn badge git-badge">Git</button>
             <button onclick="filterTools(this, 'apt')" class="btn badge apt-badge">Apt</button>
@@ -64,7 +64,7 @@ html_start = """<!DOCTYPE html>
 html_end = """</div>
         </div>
       </div>
-      <div class="col-md-6 right-side border">
+      <div class="col-lg-6 col-12 right-side border">
         <div class="container p-4">
           <h4>Installation directory</h4>
           <div class="input-group mb-3">
