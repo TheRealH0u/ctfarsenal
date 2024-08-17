@@ -96,57 +96,6 @@ function buttonPress(src) {
     }
 }
 
-
-// if (scriptParagraph.length > 0) {
-//     scriptParagraph.remove();
-//     if (scriptCategory.children().length == 0) {
-//         scriptCategory.remove();
-//     }
-//     var c = parseInt(counter.text());
-//     c = c - 1;
-//     counter.text(c.toString());
-// } else {
-//     var installation = loadJSONSync(`tools/${category.replace("-", "/")}/${installationMethod}.json` ,id);
-//     const installationBlacklist = ["apt", "gem", "pip3", "go"];
-//     const noCategoryNoSpan = ["gospider", "sns"];
-
-// var type = "<p>";
-// if (scriptCategory.length == 0) {
-//     var text = "";
-//     if (!installationBlacklist.includes(installationMethod)) {
-//         text = `mkdir -p $TOOLS/${category.replace("-", "/")} && export TPATH=$TOOLS/${category.replace("-", "/")}`;
-//     } else {
-//         switch (installationMethod) {
-//             case "apt":
-//                 text = "sudo apt install -y ";
-//                 break;
-//             case "pip3":
-//                 text = "pip3 install ";
-//                 break;
-//             case "gem":
-//                 text = "sudo gem install ";
-//                 break;
-//         }
-//     }
-//     var addCategory = $('<div>', {
-//         id: category,
-//         text: text
-//     });
-//     script.append(addCategory);
-//     scriptCategory = $(`#${category}`);
-// }
-//         if (installationBlacklist.includes(installationMethod) && !noCategoryNoSpan.includes(id)) type = "<span>";
-//         var addParagraph = $(type, {
-//             id: id,
-//             text: installation + " "
-//         });
-//         scriptCategory.append(addParagraph);
-//         var c = parseInt(counter.text());
-//         c = c + 1;
-//         counter.text(c.toString());
-//     }
-// }
-
 function download(content, filename, contentType) {
     var a = document.createElement('a');
     var blob = new Blob([content], { type: contentType });
@@ -181,25 +130,21 @@ function downloadScript() {
     download(scriptText, "output.sh", "text/plain");
 }
 
-// function allTools(category){
-//     var buttons = $('[data-category="apt"]');
-//     buttons.each(function() {
-//         var $element = $(this);
-//         handleClick().then(function() {
-//             $element.click();
-//         });
-//     });
-// }
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+// TODO: Will add a function to just select all the tools od unselect all the tools
+// function allTools(){
+//     const buttons = document.querySelectorAll('button[class="tool-class"');
+//     console.log(buttons);
+// }
 
 function allTools(category) {
-    console.log(category);
+    //console.log(category);
     const buttons = document.querySelectorAll(`button[data-category="${category}"]`);
-    console.log(buttons);
+    //console.log(buttons);
     for (let i = 0; i < buttons.length; i++) {
-        console.log(buttons[i]);
+        //console.log(buttons[i]);
         if (buttons[i].classList.contains('btn-custom-dark')) {
             buttonPress(buttons[i]);
         }
@@ -207,13 +152,108 @@ function allTools(category) {
 }
 
 function noneTools(category) {
-    console.log(category);
+    //console.log(category);
     const buttons = document.querySelectorAll(`button[data-category="${category}"]`);
-    console.log(buttons);
+    //console.log(buttons);
     for (let i = 0; i < buttons.length; i++) {
-        console.log(buttons[i]);
+        //console.log(buttons[i]);
         if (buttons[i].classList.contains('btn-light')) {
             buttonPress(buttons[i]);
         }
     }
+}
+
+const activeFilters = {};
+
+function filterTools(src, category) {
+    var btn = $(src);
+    btn.toggleClass(`${category}-badge ${category}-badge-active`);
+    
+    // Toggle filter in the global state
+    if (activeFilters[category]) {
+        delete activeFilters[category];
+    } else {
+        activeFilters[category] = true;
+    }
+    console.log(activeFilters);
+
+    applyFilters();
+}
+
+function applyFilters() {
+    // Unhide all buttons first
+    const allButtons = document.querySelectorAll('button.tool-class');
+    allButtons.forEach(button => button.style.display = 'inline-block');
+
+    showAllAccordionItems();
+    // If no filters are active, display everything
+    if (Object.keys(activeFilters).length === 0) {
+        showAllAccordionItems();
+        return;
+    }
+
+    // Dynamically build the selector for buttons that should remain visible
+    let selector = 'button.tool-class';
+    if (Object.keys(activeFilters).length > 0) {
+        // Create a comma-separated list of selectors
+        const filterSelectors = Object.keys(activeFilters)
+            .map(category => `[data-installation="${category}"]`)
+            .join(', ');
+        
+        selector += filterSelectors;
+    }
+
+    // Get all buttons
+    const buttonsToHide = document.querySelectorAll('button.tool-class');
+
+    // Hide buttons that do not match all active filters
+    buttonsToHide.forEach(button => {
+        // Check if the button matches the dynamic selector for active filters
+        if (!button.matches(selector)) {
+            button.style.display = 'none';
+        }
+    });
+
+    // Check each .accordion-item and hide it if it has no visible .tool-class buttons
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        const visibleButtons = item.querySelectorAll('button.tool-class:not([style*="display: none"])');
+        if (visibleButtons.length === 0) {
+            item.style.display = 'none';
+        } else {
+            item.style.display = '';
+        }
+    });
+}
+
+
+
+function showAllAccordionItems() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => item.style.display = 'block');
+}
+
+function filterRemove() {
+    // Select all badges
+    const allBadges = document.querySelectorAll('.badge');
+
+    // Iterate through each badge
+    allBadges.forEach(badge => {
+        // Get the list of classes for the badge
+        const classes = badge.classList;
+
+        // Check if the badge has an active class
+        classes.forEach(className => {
+            if (className.endsWith('-badge-active')) {
+                // Replace '-badge-active' with '-badge'
+                const newClass = className.replace('-badge-active', '-badge');
+                
+                // Remove the '-badge-active' class and add the '-badge' class
+                badge.classList.remove(className);
+                badge.classList.add(newClass);
+            }
+        });
+    });
+
+    showAllAccordionItems();
 }

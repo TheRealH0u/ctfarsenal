@@ -43,15 +43,18 @@ html_start = """<!DOCTYPE html>
     <div class="row">
       <div class="col-md-6 left-side border">
         <div class="container p-4">
+          <div class="container mb-3">
+            <button onclick="filterRemove()" class="btn badge none-badge">None</button>
+            <button onclick="filterTools(this, 'git')" class="btn badge git-badge">Git</button>
+            <button onclick="filterTools(this, 'apt')" class="btn badge apt-badge">Apt</button>
+            <button onclick="filterTools(this, 'pip3')" class="btn badge pip3-badge">Pip3</button>
+            <button onclick="filterTools(this, 'wget')" class="btn badge wget-badge">Wget</button>
+            <button onclick="filterTools(this, 'gem')" class="btn badge gem-badge">Gem</button>
+            <button onclick="filterTools(this, 'go')" class="btn badge go-badge">Go</button>
+          </div>
           <div class="input-group mb-3">
             <input id="tools-search" type="text" class="form-control" placeholder="Search tools description..."
               aria-label="Search tools description..." aria-describedby="basic-addon1">
-          </div>
-          <div class="container mb-3">
-            <span class="badge git-badge">Git</span>
-            <span class="badge apt-badge">Apt</span>
-            <span class="badge pip3-badge">Pip3</span>
-            <span class="badge wget-badge">Wget</span>
           </div>
           <div class="accordion accordion-flush" id="accordionFlush">
 """

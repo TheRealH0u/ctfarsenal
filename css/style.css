@@ -45,19 +45,31 @@ body{
 
 .popover-apt-header {
     color: white !important;
-    background: #FFA000 !important; /* Dark Amber for APT */
+    background: #FFA000 !important;
     transition: 0.3s;
 }
 
 .popover-pip3-header {
     color: white !important;
-    background: #3CB371 !important; /* Medium Sea Green for Pip3 */
+    background: #3CB371 !important;
     transition: 0.3s;
 }
 
 .popover-wget-header {
     color: white !important;
-    background: #bdbd2c !important; /* Dark Lime for Wget */
+    background: #bdbd2c !important;
+    transition: 0.3s;
+}
+
+.popover-gem-header {
+    color: white !important;
+    background: #bd2c7e !important;
+    transition: 0.3s;
+}
+
+.popover-go-header {
+    color: white !important;
+    background: #2c8dbd !important;
     transition: 0.3s;
 }
 
@@ -104,9 +116,24 @@ body{
     background-color: #bdbd2c !important; /* Dark Lime for Wget */
 }
 
+.btn-custom-dark[data-installation="gem"] {
+    color: white !important;
+    background-color: #bd2c7e !important; /* Dark Lime for Wget */
+}
+
+.btn-custom-dark[data-installation="go"] {
+    color: white !important;
+    background-color: #2c8dbd !important; /* Dark Lime for Wget */
+}
+
+.none-badge{
+    background-color: #1a1a1a !important;
+}
+
 .git-badge{
     background-color: #673AB7 !important;
 }
+
 .apt-badge{
     background-color: #FFA000 !important;
 }
@@ -115,4 +142,36 @@ body{
 }
 .wget-badge{
     background-color: #bdbd2c !important;
+}
+.gem-badge{
+    background-color: #bd2c7e !important;
+}
+.go-badge{
+    background-color: #2c8dbd !important;
+}
+
+.git-badge-active{
+    background-color: #00bfff !important;
+    color: #673AB7 !important;
+}
+
+.apt-badge-active{
+    background-color: #00bfff !important;
+    color: #FFA000 !important;
+}
+.pip3-badge-active{
+    background-color: #00bfff !important;
+    color: #3CB371 !important;
+}
+.wget-badge-active{
+    background-color: #00bfff !important;
+    color: #bdbd2c !important;
+}
+.gem-badge-active{
+    background-color: #00bfff !important;
+    color: #bd2c7e !important;
+}
+.go-badge-active{
+    background-color: #00bfff !important;
+    color: #2c8dbd !important;
 }
