@@ -175,22 +175,12 @@ function filterTools(src, category) {
     } else {
         activeFilters[category] = true;
     }
-    console.log(activeFilters);
 
     applyFilters();
 }
 
 function applyFilters() {
-    // Unhide all buttons first
-    const allButtons = document.querySelectorAll('button.tool-class');
-    allButtons.forEach(button => button.style.display = 'inline-block');
-
-    showAllAccordionItems();
-    // If no filters are active, display everything
-    if (Object.keys(activeFilters).length === 0) {
-        showAllAccordionItems();
-        return;
-    }
+    showAllItems();
 
     // Dynamically build the selector for buttons that should remain visible
     let selector = 'button.tool-class';
@@ -228,7 +218,12 @@ function applyFilters() {
 
 
 
-function showAllAccordionItems() {
+function showAllItems() {
+    // Show all tool-class buttons
+    const allButtons = document.querySelectorAll('button.tool-class');
+    allButtons.forEach(button => button.style.display = 'inline-block');
+
+    // Show all accordion-item classes
     const accordionItems = document.querySelectorAll('.accordion-item');
     accordionItems.forEach(item => item.style.display = 'block');
 }
@@ -255,5 +250,5 @@ function filterRemove() {
         });
     });
 
-    showAllAccordionItems();
+    showAllItems();
 }
