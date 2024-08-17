@@ -16,7 +16,7 @@ html_start = """<!DOCTYPE html>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-dark text-light">
+<body class="text-light">
   <a href="https://github.com/TheRealH0u/ctfarsenal" class="github-corner"
     aria-label="View source on GitHub"><svg width="80" height="80"
       style="fill:#fff;color:#151513;position:absolute;top:0;border:0;right:0" aria-hidden="true" viewBox="0 0 250 250">
@@ -28,8 +28,8 @@ html_start = """<!DOCTYPE html>
         d="M115 115c-.1.1 3.7 1.5 4.8.4l13.9-13.8c3.2-2.4 6.2-3.2 8.5-3-8.4-10.6-14.7-24.2 1.6-40.6 4.7-4.6 10.2-6.8 15.9-7 .6-1.6 3.5-7.4 11.7-10.9 0 0 4.7 2.4 7.4 16.1 4.3 2.4 8.4 5.6 12.1 9.2 3.6 3.6 6.8 7.8 9.2 12.2 13.7 2.6 16.2 7.3 16.2 7.3-3.6 8.2-9.4 11.1-10.9 11.7-.3 5.8-2.4 11.2-7.1 15.9-16.4 16.4-30 10-40.6 1.6.2 2.8-1 6.8-5 10.8L141 136.5c-1.2 1.2.6 5.4.8 5.3Z"
         fill="currentColor" class="octo-body"></path>
     </svg></a>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body">
+  <div class="container border-bottom border-body">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <span class="navbar-brand">
           <div class="vr">&nbsp;</div>
@@ -44,40 +44,45 @@ html_start = """<!DOCTYPE html>
       <div class="col-md-6 left-side border">
         <div class="container p-4">
           <div class="input-group mb-3">
-            <input id="tools-search" type="text" class="form-control" placeholder="Search tools description..." aria-label="Search tools description..."
-              aria-describedby="basic-addon1">
+            <input id="tools-search" type="text" class="form-control" placeholder="Search tools description..."
+              aria-label="Search tools description..." aria-describedby="basic-addon1">
           </div>
-<div class="accordion accordion-flush" id="accordionFlush">
+          <div class="container mb-3">
+            <span class="badge git-badge">Git</span>
+            <span class="badge apt-badge">Apt</span>
+            <span class="badge pip3-badge">Pip3</span>
+            <span class="badge wget-badge">Wget</span>
+          </div>
+          <div class="accordion accordion-flush" id="accordionFlush">
 """
 
 
 
 html_end = """</div>
-</div>
-</div>
-<div class="col-md-6 right-side border">
-<div class="container p-4">
-  <h4>Installation directory</h4>
-  <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">$TOOLS = $HOME/</span>
-    <input id="tools-path" type="text" class="form-control" placeholder="Username" aria-label="Username"
-      aria-describedby="basic-addon1" value="Tools">
-    <button class="btn btn-dark border-white" type="button" onclick="downloadScript()">Generate script</button>
-  </div>
-  <hr>
-  <code id="script-output" style="color:white">
+        </div>
+      </div>
+      <div class="col-md-6 right-side border">
+        <div class="container p-4">
+          <h4>Installation directory</h4>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">$TOOLS = $HOME/</span>
+            <input id="tools-path" type="text" class="form-control" placeholder="Username" aria-label="Username"
+              aria-describedby="basic-addon1" value="Tools">
+            <button class="btn btn-light border-dark" type="button" onclick="downloadScript()">Generate script</button>
+          </div>
+          <code id="script-output">
   </code>
-</div>
-</div>
-</div>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/prism.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/buttonPress.js"></script>
-<script src="js/search.js"></script>
-<script src="js/popovers.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/prism.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/buttonPress.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/popovers.js"></script>
 </body>
 
 </html>
@@ -122,13 +127,17 @@ accordion_start = """
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapse{ACCORDION_NAME}" aria-expanded="false"
 aria-controls="flush-collapse{ACCORDION_NAME}">
-{ACCORDION_NAME}&nbsp;<span class="badge badge-light bg-light text-dark"><span id="{ACCORDION_CATEGORY}-counter">0</span>/{NUMBER_OF_TOOLS}</span>
+{ACCORDION_NAME}&nbsp;<span class="badge badge-light bg-light text-dark"><span
+    id="{ACCORDION_CATEGORY}-counter">0</span>/{NUMBER_OF_TOOLS}</span>
 </button>
 </h2>
-<div id="flush-collapse{ACCORDION_NAME}" class="accordion-collapse collapse" data-bs-parent="#accordionFlush" aria-labelledby="flush-heading{ACCORDION_NAME}">
+<div id="flush-collapse{ACCORDION_NAME}" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"
+aria-labelledby="flush-heading{ACCORDION_NAME}">
 <div class="accordion-body">
-<button class="btn btn-success border-white m-1" type="button" onclick="allTools('{ACCORDION_CATEGORY}')">ALL</button>
-<button class="btn btn-danger border-white m-1" type="button" onclick="noneTools('{ACCORDION_CATEGORY}')">None</button>
+<button class="btn btn-success border-white m-1" type="button"
+  onclick="allTools('{ACCORDION_CATEGORY}')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button"
+  onclick="noneTools('{ACCORDION_CATEGORY}')">None</button>
 """
 
 accordion_end = """</div>
@@ -138,7 +147,7 @@ accordion_end = """</div>
 
 accordion_data = ""
 
-accordion_button = """<button class="btn btn-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-title="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
+accordion_button = """<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="{TOOL_NAME}" data-category="{ACCORDION_CATEGORY}" data-installation="{INSTALLATION_METHOD}" data-bs-title="{INSTALLATION_METHOD}" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="{TOOL_DESCRIPTION}">{TOOL_NAME}</button>"""
 
 new_html = ""
 

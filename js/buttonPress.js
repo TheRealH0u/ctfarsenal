@@ -19,7 +19,7 @@ function buttonPress(src) {
     var btn = $(src);
     var id = btn.data("name");
 
-    btn.toggleClass('btn-dark btn-light');
+    btn.toggleClass('btn-custom-dark btn-custom-light');
     var category = btn.data("category");
     var installationMethod = btn.data("installation");
     var installationCategory = $(`#${installationMethod}`);
@@ -200,7 +200,7 @@ function allTools(category) {
     console.log(buttons);
     for (let i = 0; i < buttons.length; i++) {
         console.log(buttons[i]);
-        if (buttons[i].classList.contains('btn-dark')) {
+        if (buttons[i].classList.contains('btn-custom-dark')) {
             buttonPress(buttons[i]);
         }
     }
