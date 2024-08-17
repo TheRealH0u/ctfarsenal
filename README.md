@@ -1,6 +1,12 @@
 # CTFArsenal
 This is a collection of tools for all hackers. It is constantly updated (when I have free time) with the latest tools (found on twitter or on CTFs).  
 
+## To add
+Android
+- https://github.com/WithSecureLabs/drozer
+- jadx-gui
+- apktool
+
 ## Tools
 | Tool                             | Link                                                                  |
 | -------------------------------- | --------------------------------------------------------------------- |
