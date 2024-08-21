@@ -7,6 +7,9 @@ Android
 - jadx-gui
 - apktool
 
+## To EDIT
+Unisec is a gem not a git repo, I mean it has a git repo but installed is through a gem
+
 ## Tools
 | Tool                             | Link                                                                  |
 | -------------------------------- | --------------------------------------------------------------------- |
