@@ -2,10 +2,6 @@
 This is a collection of tools for all hackers. It is constantly updated (when I have free time) with the latest tools (found on twitter or on CTFs).  
 
 ## To add
-Android
-- https://github.com/WithSecureLabs/drozer
-- jadx-gui
-- apktool
 
 ## To EDIT
 Unisec is a gem not a git repo, I mean it has a git repo but installed is through a gem

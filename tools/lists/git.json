@@ -1,0 +1,3 @@
+{
+    "xss-payload-list": "git -C $TPATH clone https://github.com/payloadbox/xss-payload-list.git"
+}

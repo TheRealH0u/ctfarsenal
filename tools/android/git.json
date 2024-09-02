@@ -1,3 +1,5 @@
 {
-    "slicer": "git -C $TPATH clone https://github.com/mzfr/slicer.git"
+    "slicer": "git -C $TPATH clone https://github.com/mzfr/slicer.git",
+    "drozer": "git -C $TPATH clone https://github.com/WithSecureLabs/drozer.git",
+    "quark-engine": "git -C $TPATH clone https://github.com/quark-engine/quark-engine.git"
 }
