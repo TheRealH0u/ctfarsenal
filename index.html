@@ -79,7 +79,7 @@ aria-labelledby="flush-headingAmazon">
 data-bs-toggle="collapse" data-bs-target="#flush-collapseAndroid" aria-expanded="false"
 aria-controls="flush-collapseAndroid">
 Android&nbsp;<span class="badge badge-light bg-light text-dark"><span
-    id="android-counter">0</span>/2</span>
+    id="android-counter">0</span>/8</span>
 </button>
 </h2>
 <div id="flush-collapseAndroid" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"
@@ -89,7 +89,13 @@ aria-labelledby="flush-headingAndroid">
   onclick="allTools('android')">ALL</button>
 <button class="btn btn-danger border-white m-1" type="button"
   onclick="noneTools('android')">None</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="jadx-gui" data-category="android" data-installation="apt" data-bs-title="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Jadx-GUI is a graphical user interface (GUI) application built on top of the JADX tool, which is a powerful open-source decompiler for Android applications. It allows users to easily decompile Android APK files and DEX (Dalvik Executable) files into readable Java source code.">jadx-gui</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="apktool" data-category="android" data-installation="apt" data-bs-title="apt" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Apktool is an open-source tool designed for reverse engineering Android APK files. It enables users to decompile APKs, allowing them to extract the underlying resources and source code, modify them, and then recompile the APK. Apktool is particularly useful for modifying Android apps' resources, such as layouts, images, and other assets, as well as understanding the structure and behavior of an app's compiled code.">apktool</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="slicer" data-category="android" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Slicer is a tool to automate the recon process on an APK file. Returns all the activities, receivers, and services which are exported and have null permissions and can be externally provoked.">slicer</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="drozer" data-category="android" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="drozer is a security testing framework for Android. It allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Android Runtime, other apps' IPC endpoints and the underlying OS. It provides tools to help you use, share and understand public Android exploits.">drozer</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="quark-engine" data-category="android" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="With Quark Agent, you can perform analyses using only natural language. It creates Quark Script code following your ideas and adjusts the code promptly as you provide feedback.">quark-engine</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="androguard" data-category="android" data-installation="pip3" data-bs-title="pip3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Androguard is an open-source Python-based toolset designed for reverse engineering and analyzing Android applications. It provides a comprehensive suite of tools for dissecting APK files, DEX files, and Android binary XML files, offering deep insights into the structure and behavior of Android apps.">androguard</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="frida-tools" data-category="android" data-installation="pip3" data-bs-title="pip3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Frida lets you inject your own scripts into black box processes. Hook any function, spy on crypto APIs or trace private application code, no source code needed. Edit, hit save, and instantly see the results. All without compilation steps or program restarts.">frida-tools</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="genymotion" data-category="android" data-installation="wget" data-bs-title="wget" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Genymotion is a fast Android emulator based on VirtualBox, designed to run and test Android applications on Windows, macOS, and Linux.">genymotion</button>
 </div>
 </div>
@@ -395,6 +401,27 @@ aria-labelledby="flush-headingJava">
 </div>
 
 <div class="accordion-item bg-dark text-white">
+<h2 class="accordion-header bg-dark text-white" id="flush-headingLists">
+<button class="accordion-button collapsed bg-dark text-white border" type="button"
+data-bs-toggle="collapse" data-bs-target="#flush-collapseLists" aria-expanded="false"
+aria-controls="flush-collapseLists">
+Lists&nbsp;<span class="badge badge-light bg-light text-dark"><span
+    id="lists-counter">0</span>/1</span>
+</button>
+</h2>
+<div id="flush-collapseLists" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"
+aria-labelledby="flush-headingLists">
+<div class="accordion-body">
+<button class="btn btn-success border-white m-1" type="button"
+  onclick="allTools('lists')">ALL</button>
+<button class="btn btn-danger border-white m-1" type="button"
+  onclick="noneTools('lists')">None</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="xss-payload-list" data-category="lists" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="xss-payload-list is a list of XSS payloads that can be used with different tools. It contains numerous xss payloads for all your hacking needs.">xss-payload-list</button>
+</div>
+</div>
+</div>
+
+<div class="accordion-item bg-dark text-white">
 <h2 class="accordion-header bg-dark text-white" id="flush-headingMetadata">
 <button class="accordion-button collapsed bg-dark text-white border" type="button"
 data-bs-toggle="collapse" data-bs-target="#flush-collapseMetadata" aria-expanded="false"
@@ -421,7 +448,7 @@ aria-labelledby="flush-headingMetadata">
 data-bs-toggle="collapse" data-bs-target="#flush-collapseMicrosoft" aria-expanded="false"
 aria-controls="flush-collapseMicrosoft">
 Microsoft&nbsp;<span class="badge badge-light bg-light text-dark"><span
-    id="microsoft-counter">0</span>/5</span>
+    id="microsoft-counter">0</span>/7</span>
 </button>
 </h2>
 <div id="flush-collapseMicrosoft" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"
@@ -435,6 +462,8 @@ aria-labelledby="flush-headingMicrosoft">
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="IIS-ShortName-Scanner" data-category="microsoft" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="IIS ShortName Scanner is a tool used to detect short names of files and directories on Microsoft Internet Information Server (IIS). It leverages a vulnerability that reveals 8.3 filenames, potentially exposing sensitive information and aiding in further attacks.">IIS-ShortName-Scanner</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="MDE_Enum" data-category="microsoft" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="MDE_Enum is a comprehensive .NET tool designed to extract and display detailed information about Windows Defender exclusions and Attack Surface Reduction (ASR) rules. It is capable of querying both local and remote systems effectively, even from a low-user context, making it a versatile tool for system administrators and security professionals.">MDE_Enum</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="ccmpwn" data-category="microsoft" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ccpmpwn. Lateral movement script that leverages the CcmExec service to remotely hijack user sessions.">ccmpwn</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="de4dot" data-category="microsoft" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="de4dot is an open source (GPLv3) .NET deobfuscator and unpacker written in C#. It will try its best to restore a packed and obfuscated assembly to almost the original assembly. Most of the obfuscation can be completely restored (eg. string encryption), but symbol renaming is impossible to restore since the original names aren't (usually) part of the obfuscated assembly.">de4dot</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="ConfuserEx" data-category="microsoft" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ConfuserEx is a open-source protector for .NET applications. It is the successor of Confuser project.">ConfuserEx</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="sns" data-category="microsoft" data-installation="go" data-bs-title="go" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="SNS, or Subdomain Name Scanner, is a tool for enumerating subdomains of a given domain. It is useful for discovering potentially vulnerable or unlisted subdomains.">sns</button>
 </div>
 </div>
@@ -622,7 +651,7 @@ aria-labelledby="flush-headingRecon">
 data-bs-toggle="collapse" data-bs-target="#flush-collapseReversing" aria-expanded="false"
 aria-controls="flush-collapseReversing">
 Reversing&nbsp;<span class="badge badge-light bg-light text-dark"><span
-    id="reversing-counter">0</span>/7</span>
+    id="reversing-counter">0</span>/8</span>
 </button>
 </h2>
 <div id="flush-collapseReversing" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"
@@ -639,6 +668,7 @@ aria-labelledby="flush-headingReversing">
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="dnspy" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="dnSpy is a debugger and .NET assembly editor. It is used for decompiling, debugging, and modifying .NET applications, aiding in reverse engineering and security analysis.">dnspy</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="angr" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="angr is a binary analysis framework for analyzing and exploring binary executables. It provides tools for static and dynamic analysis, symbolic execution, and vulnerability discovery.">angr</button>
 <button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="ImHex" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ImHex is a Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.">ImHex</button>
+<button class="btn btn-custom-dark border-white m-1 tool-class" type="button" onclick="buttonPress(this)" data-name="ILSpy" data-category="reversing" data-installation="git" data-bs-title="git" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="ILSpy is the open-source .NET assembly browser and decompiler.">ILSpy</button>
 </div>
 </div>
 </div>
