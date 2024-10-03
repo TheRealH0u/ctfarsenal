@@ -44,8 +44,7 @@ function buttonPress(src) {
             var c = parseInt(categoryCounter.text());
             c = c - 1;
             categoryCounter.text(c.toString());
-        }
-        else {
+        } else {
             if (installationCategory.length == 0) {
                 text = spanInstallationDict[installationMethod];
                 var addCategory = $('<div>', {
@@ -64,8 +63,7 @@ function buttonPress(src) {
             c = c + 1;
             categoryCounter.text(c.toString());
         }
-    }
-    else {
+    } else {
         if (scriptParagraph.length > 0) {
             scriptParagraph.remove();
             if (scriptCategory.children().length == 0) {
@@ -109,10 +107,10 @@ function downloadScript() {
     var toolsPath = `export TOOLS="$HOME/${$("#tools-path").val()}"`;
     scriptText += toolsPath + "\n\n";
     var divContents = $('#script-output').contents();
-    $("#script-output").children("div").each(function () {
+    $("#script-output").children("div").each(function() {
         var divContents = $(this).contents();
         scriptText += "# " + $(this).attr("id");
-        divContents.each(function () {
+        divContents.each(function() {
             if (this.nodeType === 3) {
                 scriptText += "\n";
                 scriptText += $(this).text().trim();
@@ -168,7 +166,7 @@ const activeFilters = {};
 function filterTools(src, category) {
     var btn = $(src);
     btn.toggleClass(`${category}-badge ${category}-badge-active`);
-    
+
     // Toggle filter in the global state
     if (activeFilters[category]) {
         delete activeFilters[category];
@@ -189,7 +187,7 @@ function applyFilters() {
         const filterSelectors = Object.keys(activeFilters)
             .map(category => `[data-installation="${category}"]`)
             .join(', ');
-        
+
         selector += filterSelectors;
     }
 
@@ -237,15 +235,17 @@ function filterRemove() {
         // Get the list of classes for the badge
         const classes = badge.classList;
 
+
         // Check if the badge has an active class
         classes.forEach(className => {
             if (className.endsWith('-badge-active')) {
                 // Replace '-badge-active' with '-badge'
+                var category = className.replace("-badge-active", "");
                 const newClass = className.replace('-badge-active', '-badge');
-                
                 // Remove the '-badge-active' class and add the '-badge' class
                 badge.classList.remove(className);
                 badge.classList.add(newClass);
+                delete activeFilters[category];
             }
         });
     });
