@@ -1,3 +1,4 @@
 {
-    "xss-payload-list": "git -C $TPATH clone https://github.com/payloadbox/xss-payload-list.git"
+    "xss-payload-list": "git -C $TPATH clone https://github.com/payloadbox/xss-payload-list.git",
+    "hashes": "git -C $TPATH clone https://github.com/spaze/hashes.git"
 }

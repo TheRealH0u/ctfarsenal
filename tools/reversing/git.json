@@ -3,5 +3,6 @@
     "dnspy": "git -C $TPATH clone https://github.com/dnSpy/dnSpy.git",
     "angr": "git -C $TPATH clone https://github.com/angr/angr.git",
     "ImHex": "git -C $TPATH clone https://github.com/WerWolv/ImHex.git",
-    "ILSpy": "git -C $TPATH clone https://github.com/icsharpcode/ILSpy.git"
+    "ILSpy": "git -C $TPATH clone https://github.com/icsharpcode/ILSpy.git",
+    "gdsdecomp": "git -C $TPATH clone https://github.com/bruvzg/gdsdecomp.git"
 }

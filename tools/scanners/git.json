@@ -7,5 +7,6 @@
     "subbrute": "git -C $TPATH clone https://github.com/TheRook/subbrute.git",
     "smbmap": "git -C $TPATH clone https://github.com/ShawnDEvans/smbmap.git",
     "nuclei": "git -C $TPATH clone https://github.com/projectdiscovery/nuclei.git",
-    "dep-scan":"git -C $TPATH clone https://github.com/owasp-dep-scan/dep-scan.git"
+    "dep-scan": "git -C $TPATH clone https://github.com/owasp-dep-scan/dep-scan.git",
+    "VulnScan": "git -C $TPATH clone https://github.com/Hacking-Notes/VulnScan.git"
 }

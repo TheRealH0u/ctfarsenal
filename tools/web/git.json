@@ -1,3 +1,9 @@
 {
-    "websocat":"git -C $TPATH clone https://github.com/vi/websocat.git"
+    "websocat": "git -C $TPATH clone https://github.com/vi/websocat.git",
+    "apidor": "git -C $TPATH clone https://github.com/bm402/apidor.git",
+    "IDOR-IN": "git -C $TPATH clone https://github.com/GManOfficial/IDOR-IN.git",
+    "IDORD": "git -C $TPATH clone https://github.com/AyemunHossain/IDORD.git",
+    "ppfuzz": "git -C $TPATH clone https://github.com/dwisiswant0/ppfuzz.git",
+    "ppmap": "git -C $TPATH clone https://github.com/kleiton0x00/ppmap.git",
+    "pphack": "git -C $TPATH clone https://github.com/edoardottt/pphack.git"
 }

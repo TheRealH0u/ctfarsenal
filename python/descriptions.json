@@ -151,5 +151,15 @@
     "androguard": "Androguard is an open-source Python-based toolset designed for reverse engineering and analyzing Android applications. It provides a comprehensive suite of tools for dissecting APK files, DEX files, and Android binary XML files, offering deep insights into the structure and behavior of Android apps.",
     "ILSpy": "ILSpy is the open-source .NET assembly browser and decompiler.",
     "quark-engine": "With Quark Agent, you can perform analyses using only natural language. It creates Quark Script code following your ideas and adjusts the code promptly as you provide feedback.",
-    "frida-tools": "Frida lets you inject your own scripts into black box processes. Hook any function, spy on crypto APIs or trace private application code, no source code needed. Edit, hit save, and instantly see the results. All without compilation steps or program restarts."
+    "frida-tools": "Frida lets you inject your own scripts into black box processes. Hook any function, spy on crypto APIs or trace private application code, no source code needed. Edit, hit save, and instantly see the results. All without compilation steps or program restarts.",
+    "reflutter": "reFlutter is a handy tool for reverse engineering Flutter-based applications for both rooted and non-rooted Android. To use Reflutter, you must obtain your APK and replace libflutter.so, resign the APK and reinstall it.",
+    "gdsdecomp": "gdsdecomp is a decompiler for Godot applications. Decompile, extract and reverse projects, APK, PCK or embeded EXE files made with Godot",
+    "hashes": "Hashes is a repository of PHP hash collisions.",
+    "apidor": "Apidor is a tool for automating the search for Insecure Direct Object Reference (IDOR) vulnerabilities in web applications and APIs.",
+    "IDOR-IN": "The IDOR IN is a security utility designed to detect and identify Insecure Direct Object Reference (IDOR) vulnerabilities in web applications. IDOR vulnerabilities occur when an application allows direct access or manipulation of sensitive objects or resources without proper authorization or access control. This can lead to unauthorized access, data exposure, and potentially malicious activities.",
+    "IDORD": "IDORD is the only tool for IDOR vulnerability, EVER.",
+    "ppfuzz": "ppfuzz is a fast tool to scan client-side prototype pollution vulnerability written in Rust.",
+    "ppmap": "ppmap is a simple scanner/exploitation tool written in GO which automatically exploits known and existing gadgets (checks for specific variables in the global context) to perform XSS via Prototype Pollution. NOTE: The program only exploits known gadgets, but does not cover code analysis or any advanced Prototype Pollution exploitation, which may include custom gadgets.",
+    "pphack": "pphack is the most advanced Client-Side Prototype Pollution Scanner",
+    "VulnScan": "VulnScan is a powerful vulnerability scanning tool designed to help website owners protect their websites from cyber threats. It uses cutting-edge technology that leverages ChatGPT, an AI language model trained by OpenAI, to verify the JavaScript of your website and search for vulnerabilities. With vulnScan, you can detect security vulnerabilities and fix them before they can be exploited by cybercriminals."
 }
