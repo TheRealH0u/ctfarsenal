@@ -1,0 +1,4 @@
+{
+    "iCULeak":"git -C $TPAHT clone https://github.com/llt4l/iCULeak.py.git",
+    "SIMurai": "git -C $TPAHT clone https://github.com/tomasz-lisowski/simurai.git"
+}

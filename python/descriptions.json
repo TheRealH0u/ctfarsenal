@@ -161,5 +161,14 @@
     "ppfuzz": "ppfuzz is a fast tool to scan client-side prototype pollution vulnerability written in Rust.",
     "ppmap": "ppmap is a simple scanner/exploitation tool written in GO which automatically exploits known and existing gadgets (checks for specific variables in the global context) to perform XSS via Prototype Pollution. NOTE: The program only exploits known gadgets, but does not cover code analysis or any advanced Prototype Pollution exploitation, which may include custom gadgets.",
     "pphack": "pphack is the most advanced Client-Side Prototype Pollution Scanner",
-    "VulnScan": "VulnScan is a powerful vulnerability scanning tool designed to help website owners protect their websites from cyber threats. It uses cutting-edge technology that leverages ChatGPT, an AI language model trained by OpenAI, to verify the JavaScript of your website and search for vulnerabilities. With vulnScan, you can detect security vulnerabilities and fix them before they can be exploited by cybercriminals."
+    "VulnScan": "VulnScan is a powerful vulnerability scanning tool designed to help website owners protect their websites from cyber threats. It uses cutting-edge technology that leverages ChatGPT, an AI language model trained by OpenAI, to verify the JavaScript of your website and search for vulnerabilities. With vulnScan, you can detect security vulnerabilities and fix them before they can be exploited by cybercriminals.",
+    "iCULeak": "iCULeak is a tool to find and extract credentials from phone configuration files in environments managed by Cisco's CUCM (Call Manager).",
+    "four03bypass": "four03bypass is a Python tool to bypass 403 Forbidden with different Combined Method Just be ready with the website name and forbidden path.",
+    "SIMurai": "SIMurai is a software platform designed for security-focused SIM exploration and experimentation. At its core, it offers a versatile software SIM implementation that can be integrated into various environments for advanced testing and development.",
+    "pwnlook":"Pwnlook is an offensive postexploitation tool that will give you complete control over the Outlook desktop application and therefore to the emails configured in it.",
+    "Invoke-RDPThief": "Invoke-RDPThief powerShell script runs on a loop hunting for mstsc.exe processes. When any are found, the script will perform process injection on the target process and inject RDPthief into the process in order to capture cleartext credentials.",
+    "GlobalUnProtect": "GlobalUnProtect is PoC tool for decrypting and collecting GlobalProtect configuration, cookies, and HIP files from windows client installations.",
+    "Echidna": "Echidna is a Haskell program designed for fuzzing/property-based testing of Ethereum smart contracts. It uses sophisticated grammar-based fuzzing campaigns based on a contract ABI to falsify user-defined predicates or Solidity assertions.",
+    "Tayt": "Tayt is a StarkNet smart contract fuzzer.",
+    "mishegos": "mishegos is a differential fuzzer for x86 decoders."
 }

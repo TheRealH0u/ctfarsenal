@@ -1,0 +1,4 @@
+{
+    "Echidna": "git -C $TPATH clone https://github.com/crytic/echidna.git",
+    "Tayt": "git -C $TPATH clone https://github.com/crytic/tayt.git"
+}
