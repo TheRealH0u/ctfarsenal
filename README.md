@@ -9,6 +9,10 @@ https://github.com/tomasz-lisowski/simurai
 https://github.com/amjcyber/pwnlook  
 https://github.com/The-Viper-One/Invoke-RDPThief  
 https://github.com/rotarydrone/GlobalUnProtect  
+https://github.com/crytic/echidna  
+https://github.com/crytic/tayt  
+https://github.com/trailofbits/mishegos  
+
 
 ## To EDIT
 Unisec is a gem not a git repo, I mean it has a git repo but installed is through a gem
