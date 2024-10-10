@@ -1,3 +1,0 @@
-{
-    "unisec":"git -C $TPATH clone https://github.com/Acceis/unisec.git"
-}
