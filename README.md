@@ -2,20 +2,8 @@
 This is a collection of tools for all hackers. It is constantly updated (when I have free time) with the latest tools (found on twitter or on CTFs).  
 
 ## To add
-https://github.com/ifconfig-me/subowner  
-https://github.com/llt4l/iCULeak.py  
-https://github.com/damnvuln/four03bypass  
-https://github.com/tomasz-lisowski/simurai  
-https://github.com/amjcyber/pwnlook  
-https://github.com/The-Viper-One/Invoke-RDPThief  
-https://github.com/rotarydrone/GlobalUnProtect  
-https://github.com/crytic/echidna  
-https://github.com/crytic/tayt  
-https://github.com/trailofbits/mishegos  
-
 
 ## To EDIT
-Unisec is a gem not a git repo, I mean it has a git repo but installed is through a gem
 
 ## Tools
 
