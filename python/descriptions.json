@@ -170,5 +170,8 @@
     "GlobalUnProtect": "GlobalUnProtect is PoC tool for decrypting and collecting GlobalProtect configuration, cookies, and HIP files from windows client installations.",
     "Echidna": "Echidna is a Haskell program designed for fuzzing/property-based testing of Ethereum smart contracts. It uses sophisticated grammar-based fuzzing campaigns based on a contract ABI to falsify user-defined predicates or Solidity assertions.",
     "Tayt": "Tayt is a StarkNet smart contract fuzzer.",
-    "mishegos": "mishegos is a differential fuzzer for x86 decoders."
+    "mishegos": "mishegos is a differential fuzzer for x86 decoders.",
+    "stego-lsb": "stego-lsb is a python tool for Least Significant Bit Steganography for bitmap images (.bmp and .png), WAV sound files, and byte sequences. Simple LSB Steganalysis (LSB extraction) for bitmap images.",
+    "cookiemonster": "CookieMonster is a command-line tool and API for decoding and modifying vulnerable session cookies from several different frameworks. It is designed to run in automation pipelines which must be able to efficiently process a large amount of these cookies to quickly discover vulnerabilities. Additionally, CookieMonster is extensible and can easily support new cookie formats.",
+    "CMSScan": "CMSScan is a scanner to scan WordPress, Drupal, Joomla, vBulletin websites for Security issues. CMSScan provides a centralized Security Dashboard for CMS Security scans. It is powered by wpscan, droopescan, vbscan and joomscan. It supports both on demand and scheduled scans and has the ability to sent email reports."
 }

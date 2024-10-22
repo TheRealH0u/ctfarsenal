@@ -1,0 +1,3 @@
+{
+    "cookiemonster": "go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest"
+}

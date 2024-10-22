@@ -6,5 +6,6 @@
     "ppfuzz": "git -C $TPATH clone https://github.com/dwisiswant0/ppfuzz.git",
     "ppmap": "git -C $TPATH clone https://github.com/kleiton0x00/ppmap.git",
     "pphack": "git -C $TPATH clone https://github.com/edoardottt/pphack.git",
-    "four03bypass": "git -C $TPATH clone https://github.com/damnvuln/four03bypass.git"
+    "four03bypass": "git -C $TPATH clone https://github.com/damnvuln/four03bypass.git",
+    "CMSScan": "git -C $TPATH clone https://github.com/ajinabraham/CMSScan.git"
 }
