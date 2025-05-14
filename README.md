@@ -4,9 +4,9 @@ This is a collection of tools for all hackers. It is constantly updated (when I 
 https://therealh0u.github.io/ctfarsenal/
 
 ## To add
-https://pypi.org/project/stego-lsb/
-BleachBit
-Baobab (Both tools for disk usage)
+- [ ] https://pypi.org/project/stego-lsb/
+- [ ] BleachBit 
+- [ ] Baobab (Both tools for disk usage)
 
 ## To EDIT
 
